@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"As user i want to create account So that i can login and see home page","POST - As a user I success to create account with valid data","SUCCESS","2022-06-17T19:50:49.271+07:00[Asia/Bangkok]","0.0","2.93"
+"As user i want to create account So that i can login and see home page","POST - As a user I failed to create account with empty data","SUCCESS","2022-06-17T19:50:52.214+07:00[Asia/Bangkok]","0.0","1.84"
+"As user i want to create account So that i can login and see home page","POST - As a user I failed to create account with empty email","SUCCESS","2022-06-17T19:50:54.068+07:00[Asia/Bangkok]","0.0","1.72"
+"As user i want to create account So that i can login and see home page","POST - As a user I failed to create account with not use @ in email","SUCCESS","2022-06-17T19:50:55.797+07:00[Asia/Bangkok]","0.0","2.53"
+"As user i want to create account So that i can login and see home page","POST - As a user I failed to create account with empty username","SUCCESS","2022-06-17T19:51:00.249+07:00[Asia/Bangkok]","0.0","1.68"

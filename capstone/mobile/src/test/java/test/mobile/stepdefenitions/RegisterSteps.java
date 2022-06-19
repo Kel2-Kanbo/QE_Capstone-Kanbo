@@ -28,6 +28,12 @@ public class RegisterSteps {
     public void userInputName() {
         registerPage.inputName("ucup");
     }
+    @And("user input username")
+    public void userInputUsername() {
+        Random rand = new Random();
+        int number = rand.nextInt(1000000);
+        registerPage.inputUsernaame("user"+String.valueOf(number));
+    }
 
     @And("user input email")
     public void userInputEmail() {
@@ -38,7 +44,12 @@ public class RegisterSteps {
 
     @And("user input password")
     public void userInputPassword() {
-        registerPage.inputPassword("Password!2");
+        registerPage.inputPassword("password!2");
+    }
+
+    @And("user iput confirm password")
+    public void userIputConfirmPassword() {
+        registerPage.inputConfirmPassword("password!2");
     }
 
     @And("user click register button")
@@ -46,9 +57,14 @@ public class RegisterSteps {
         registerPage.clickRegisterButton();
     }
 
-    @Then("user back to homepage")
-    public void userBackToHomepage() {
-        registerPage.backOnTheHomePage();
+    @And("user click confirm email")
+    public void userClickConfirmEmail() {
+        registerPage.verifyEmail();
+    }
+
+    @Then("user back to login page")
+    public void userBackToLoginPage() {
+        registerPage.onTheLoginPage();
     }
 
     //scenario 2
@@ -101,5 +117,21 @@ public class RegisterSteps {
     @Then("user get error message not input password")
     public void userGetErrorMessageNotInputPassword() {
         registerPage.errorMessageNoPassword();
+    }
+
+    @And("user not input username")
+    public void userNotInputUsername() {
+    }
+
+    @And("user not input confirm password")
+    public void userNotInputConfirmPassword() {
+    }
+
+    @And("user input confirm password")
+    public void userInputConfirmPassword() {
+    }
+
+    @And("user input registered username")
+    public void userInputRegisteredUsername() {
     }
 }

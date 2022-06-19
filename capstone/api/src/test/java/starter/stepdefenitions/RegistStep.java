@@ -12,36 +12,66 @@ public class RegistStep {
     @Steps
     PostRegist postRegist;
 
-    @Given("user set endpoint for register")
-    public void userSetEndpointForRegister() {
+    @Given("admin set endpoint for register")
+    public void adminSetEndpointForRegister() {
         postRegist.setEndpointsRegister();
     }
 
-    @When("user send create account with valid data")
-    public void userSendCreateAccountWithValidData() {
+    @When("admin send create account with valid data")
+    public void adminSendCreateAccountWithValidData() {
         postRegist.sendCreateAccountWithValidData();
     }
 
-    @Then("user see status code {int} after send register")
-    public void userSeeStatusCodeAfterSendRegister(int arg0) {
+    @Then("admin see status code {int} after send register")
+    public void adminSeeStatusCodeAfterSendRegister(int arg0) {
         postRegist.seeResponseCodeAfterRegist();
     }
-    @And("user see new detail account")
-    public void userSeeNewDetailAccount() {
+    @And("admin see new detail account")
+    public void adminSeeNewDetailAccount() {
         postRegist.userSeeDetailData();
     }
 
     //scenario 2
-    @When("user send POST HTTP request with empty data register")
-    public void userSendPOSTHTTPRequestWithEmptyDataRegister() {
+    @When("admin send POST HTTP request with empty data register")
+    public void adminSendPOSTHTTPRequestWithEmptyDataRegister() {
         postRegist.sendPostWithEmptyDataRegister();
     }
-    @Then("user see status code {int} and fail to create account")
-    public void userSeeStatusCodeAndFailToCreateAccount(int arg0) {
+    @Then("admin see status code {int} and fail to create account")
+    public void adminSeeStatusCodeAndFailToCreateAccount(int arg0) {
         postRegist.receiveResponseCode400();
     }
-    @And("user get error message after regist")
-    public void userGetErrorMessageAfterRegist() {
+    @And("admin get error message after regist")
+    public void adminGetErrorMessageAfterRegist() {
         postRegist.getErrorMessageRegist();
+    }
+
+    //scenario 3
+    @When("admin send POST HTTP request with empty email")
+    public void adminSendPOSTHTTPRequestWithEmptyEmail() {
+        postRegist.sendPOSTHTTPRequestWithEmptyEmail();
+    }
+
+    //scenario 4
+    @When("admin send POST HTTP request with invalid email register")
+    public void adminSendPOSTHTTPRequestWithInvalidEmailRegister() {
+        postRegist.sendPOSTHTTPRequestWithInvalidEmailRegister();
+    }
+
+    //scenario 5
+    @When("admin send POST HTTP request with not use domain email")
+    public void adminSendPOSTHTTPRequestWithNotUseDomainEmail() {
+        postRegist.sendPOSTHTTPRequestWithNotUseDomainEmail();
+    }
+
+    //scenario 6
+    @When("admin send POST HTTP request with empty username")
+    public void adminSendPOSTHTTPRequestWithEmptyUsername() {
+        postRegist.sendPOSTHTTPRequestWithEmptyUsername();
+    }
+
+    //scenario 7
+    @When("admin send POST HTTP request with fill number on username field")
+    public void adminSendPOSTHTTPRequestWithFillNumberOnUsernameField() {
+        postRegist.sendPOSTHTTPRequestWithFillNumberOnUsernameField();
     }
 }

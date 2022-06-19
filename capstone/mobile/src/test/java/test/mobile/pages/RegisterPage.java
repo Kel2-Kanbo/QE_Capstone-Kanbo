@@ -6,26 +6,32 @@ import org.openqa.selenium.By;
 import test.mobile.pageobject.BasePageObject;
 
 public class RegisterPage extends BasePageObject {
+    private By loginButton(){
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Login\"]");
+    }
     private By toRegister(){
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Register\"]");
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Register\"]");
     }
     private By nameField(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
     }
-    private By emailFieldRegist(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+    private By usernaameFieldRegist() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+    }
+    private By emailFieldRegist() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]");
     }
     private By passFieldRegist(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]");
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[4]");
+    }
+    private By confimrPassFieldRegist(){
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[5]");
     }
     private By registerButton(){
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Register\"]");
     }
-    private By iconLogin(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
-    }
-    private By loginButton(){
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Login\"]");
+    private By clickVerifyEmail(){
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Open email app\"]");
     }
     private By homePage(){
         return MobileBy.xpath("//android.view.View[@content-desc=\"Products\"]");
@@ -44,6 +50,10 @@ public class RegisterPage extends BasePageObject {
     }
 
     @Step
+    public void onTheLoginPage(){
+        waitUntilPresence(loginButton()).isDisplayed();
+    }
+    @Step
     public void clickToRegister(){
         onClick(toRegister());
     }
@@ -51,6 +61,11 @@ public class RegisterPage extends BasePageObject {
     public void inputName(String name){
         onClick(nameField());
         onType(nameField(),name);
+    }
+    @Step
+    public void inputUsernaame(String username){
+        onClick(usernaameFieldRegist());
+        onType(usernaameFieldRegist(),username);
     }
     @Step
     public void inputEmail(String email){
@@ -63,13 +78,18 @@ public class RegisterPage extends BasePageObject {
         onType(passFieldRegist(),password);
     }
     @Step
+    public void inputConfirmPassword(String password){
+        onClick(confimrPassFieldRegist());
+        onType(confimrPassFieldRegist(),password);
+    }
+    @Step
     public void clickRegisterButton(){
         onClick(registerButton());
     }
+
     @Step
-    public void onTheLoginPage(){
-        onClick(iconLogin());
-        waitUntilPresence(loginButton()).isDisplayed();
+    public void verifyEmail(){
+        onClick(clickVerifyEmail());
     }
     @Step
     public boolean backOnTheHomePage(){

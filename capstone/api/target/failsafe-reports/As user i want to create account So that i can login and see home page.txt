@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: As user i want to create account So that i can login and see home page
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.87 s <<< FAILURE! - in As user i want to create account So that i can login and see home page
+As user i want to create account So that i can login and see home page.POST - As a user I failed to create account with not use domain email  Time elapsed: 1.896 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+
+As user i want to create account So that i can login and see home page.POST - As a user I failed to create account with fill number on username field  Time elapsed: 5.204 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+
