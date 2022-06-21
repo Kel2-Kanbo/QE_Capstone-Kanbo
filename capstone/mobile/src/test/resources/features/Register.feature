@@ -1,6 +1,6 @@
 Feature: As user I want to create account So that i can login and see homepage
 
-  @register
+  @Scenario1
   Scenario: As user i have be able to success create account
     Given android user on landing screen login page
     When android user click to register

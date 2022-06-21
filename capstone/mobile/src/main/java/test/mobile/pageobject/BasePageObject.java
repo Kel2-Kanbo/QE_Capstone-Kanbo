@@ -9,7 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import test.mobile.driver.AndroidDriverPool;
 import test.mobile.driver.DriverPool;
 
+import java.beans.Visibility;
+
 public class BasePageObject {
+
     public DriverPool driver = new DriverPool();
     public AndroidDriverPool androidDriverPool = new AndroidDriverPool();
 
@@ -18,6 +21,10 @@ public class BasePageObject {
             this.driver.setAndroidDriver(this.androidDriverPool.create());
         }
         return this.driver.getAndroidDriver();
+    }
+
+    public void backApp(){
+        getDriver().navigate().back();
     }
 
     public WebDriverWait onWait() {
@@ -41,14 +48,15 @@ public class BasePageObject {
     }
 
     public void onType(By by, CharSequence... keysToSend) {
-        waitUntilPresence(by).sendKeys(keysToSend);
+        waitUntilVisible(by).sendKeys(keysToSend);
     }
 
-    public void clear(MobileBy by) {
+    public void clear(By by) {
         waitUntilPresence(by).clear();
     }
 
-    public boolean isElementInvisible(MobileBy by) {
+    public boolean isElementInvisible(By by) {
         return onWait().until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
+
 }

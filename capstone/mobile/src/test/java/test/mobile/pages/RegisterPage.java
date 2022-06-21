@@ -5,7 +5,14 @@ import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 import test.mobile.pageobject.BasePageObject;
 
+import java.util.concurrent.TimeUnit;
+
 public class RegisterPage extends BasePageObject {
+    public void timeDelay(long t) {
+        try {
+            Thread.sleep(t);
+        } catch (InterruptedException e) {}
+    }
     private By loginButton(){
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Login\"]");
     }
@@ -13,19 +20,24 @@ public class RegisterPage extends BasePageObject {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Register\"]");
     }
     private By nameField(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
+        return MobileBy.xpath("//android.widget.EditText[1]");
     }
-    private By usernaameFieldRegist() {
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+    private By usernameFieldRegist() {
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+        return MobileBy.xpath("//android.widget.EditText[2]");
     }
     private By emailFieldRegist() {
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]");
+        return MobileBy.xpath("//android.widget.EditText[3]");
     }
     private By passFieldRegist(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[4]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[4]");
+        return MobileBy.xpath("//android.widget.EditText[4]");
     }
     private By confimrPassFieldRegist(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[5]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[5]");
+        return MobileBy.xpath("//android.widget.EditText[5]");
     }
     private By registerButton(){
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Register\"]");
@@ -63,9 +75,9 @@ public class RegisterPage extends BasePageObject {
         onType(nameField(),name);
     }
     @Step
-    public void inputUsernaame(String username){
-        onClick(usernaameFieldRegist());
-        onType(usernaameFieldRegist(),username);
+    public void inputUsername(String username){
+        onClick(usernameFieldRegist());
+        onType(usernameFieldRegist(),username);
     }
     @Step
     public void inputEmail(String email){
@@ -91,6 +103,12 @@ public class RegisterPage extends BasePageObject {
     public void verifyEmail(){
         onClick(clickVerifyEmail());
     }
+
+    @Step
+    public void backToApp(){
+        backApp();
+    }
+
     @Step
     public boolean backOnTheHomePage(){
         return waitUntilVisible(homePage()).isDisplayed();

@@ -74,4 +74,62 @@ public class RegistStep {
     public void adminSendPOSTHTTPRequestWithFillNumberOnUsernameField() {
         postRegist.sendPOSTHTTPRequestWithFillNumberOnUsernameField();
     }
+
+    //scenario 8
+    @When("admin send POST HTTP request with fill letter on username field")
+    public void adminSendPOSTHTTPRequestWithFillLetterOnUsernameField() {
+        postRegist.SendPOSTHTTPRequestWithFillLetterOnUsernameField();
+    }
+
+    //scenario 9
+    @When("admin send POST HTTP request with empty password")
+    public void adminSendPOSTHTTPRequestWithEmptyPassword() {
+        postRegist.SendPOSTHTTPRequestWithEmptyPassword();
+    }
+
+    //scenario 10
+    @When("admin send POST HTTP request with invalid password")
+    public void adminSendPOSTHTTPRequestWithInvalidPassword() {
+        postRegist.SendPOSTHTTPRequestWithInvalidPassword();
+    }
+
+    //scenario 11
+    @When("admin send POST HTTP request with fill password with number")
+    public void adminSendPOSTHTTPRequestWithFillPasswordWithNumber() {
+        postRegist.SendPOSTHTTPRequestWithFillPasswordWithNumber();
+    }
+
+    //scenario 12
+    @When("admin send POST HTTP request with fill password with letter")
+    public void adminSendPOSTHTTPRequestWithFillPasswordWithLetter() {
+        postRegist.SendPOSTHTTPRequestWithFillPasswordWithLetter();
+    }
+
+    //scenario 13
+    @When("admin send POST HTTP request with fill password with combination char")
+    public void adminSendPOSTHTTPRequestWithFillPasswordWithCombinationChar() {
+        postRegist.SendPOSTHTTPRequestWithFillPasswordWithCombinationChar();
+    }
+
+    //scenario 14
+    @When("admin send POST HTTP request with registered email")
+    public void adminSendPOSTHTTPRequestWithRegisteredEmail() {
+        postRegist.SendPOSTHTTPRequestWithRegisteredEmail();
+    }
+
+    @And("admin get error message email is already taken")
+    public void adminGetErrorMessageEmailIsAlreadyTaken() {
+        postRegist.GetErrorMessageEmail();
+    }
+
+    //scenario 15
+    @When("admin send POST HTTP request with registered username")
+    public void adminSendPOSTHTTPRequestWithRegisteredUsername() {
+        postRegist.SendPOSTHTTPRequestWithRegisteredUsername();
+    }
+
+    @And("admin get error message username is already")
+    public void adminGetErrorMessageUsernameIsAlready() {
+        postRegist.GetErrorMessageUser();
+    }
 }

@@ -1,6 +1,7 @@
 package starter.register;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
@@ -10,9 +11,8 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class PostRegist {
-    private String username = "user113";
-    private String email = "user113@gmail.com" ;
-    private String password = "password!2";
+    private String username = "";
+    private String email = "" ;
     private String url = "http://3.88.14.239:80/";
 
     @Step("admin set endpoint for register")
@@ -21,12 +21,12 @@ public class PostRegist {
     }
     @Step("admin send create account with valid data")
     public void sendCreateAccountWithValidData(){
-//        Faker faker = new Faker();
-//        username = faker.name().username();
-//        email = faker.internet().emailAddress();
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
         JSONObject requestBody = new JSONObject();
         requestBody.put( "email",email );
-        requestBody.put( "password", password);
+        requestBody.put( "password", "password!2");
         requestBody.put( "username",username );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
@@ -63,8 +63,8 @@ public class PostRegist {
     public void sendPOSTHTTPRequestWithEmptyEmail() {
         JSONObject requestBody = new JSONObject();
         requestBody.put( "email","" );
-        requestBody.put( "password", password);
-        requestBody.put( "username",username );
+        requestBody.put( "password", "password!2");
+        requestBody.put( "username","user01" );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
     }
@@ -74,7 +74,7 @@ public class PostRegist {
     public void sendPOSTHTTPRequestWithInvalidEmailRegister() {
         JSONObject requestBody = new JSONObject();
         requestBody.put( "email","user111.gmail.com" );
-        requestBody.put( "password",password);
+        requestBody.put( "password","password!2");
         requestBody.put( "username","user111" );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
@@ -84,8 +84,8 @@ public class PostRegist {
     @Step("admin send POST HTTP request with not use domain email")
     public void sendPOSTHTTPRequestWithNotUseDomainEmail() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put( "email","user111@fksk" );
-        requestBody.put( "password", password);
+        requestBody.put( "email","user111" );
+        requestBody.put( "password", "password!2");
         requestBody.put( "username","user111" );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
@@ -95,8 +95,8 @@ public class PostRegist {
     @Step("admin send POST HTTP request with empty username")
     public void sendPOSTHTTPRequestWithEmptyUsername() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put( "email",email );
-        requestBody.put( "password", password);
+        requestBody.put( "email","user111@gmail,com");
+        requestBody.put( "password", "password!2");
         requestBody.put( "username","" );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
@@ -105,11 +105,122 @@ public class PostRegist {
     //scenario 7
     @Step("admin send POST HTTP request with fill number on username field")
     public void sendPOSTHTTPRequestWithFillNumberOnUsernameField() {
+        Faker faker = new Faker();
+        username = faker.number().digits(7);
+        email = faker.internet().emailAddress();
         JSONObject requestBody = new JSONObject();
         requestBody.put( "email",email );
-        requestBody.put( "password", password);
-        requestBody.put( "username","1234456" );
+        requestBody.put( "password", "password!2");
+        requestBody.put( "username",username );
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 8
+    @Step("admin send POST HTTP request with fill letter on username field")
+    public void SendPOSTHTTPRequestWithFillLetterOnUsernameField() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email", email);
+        requestBody.put( "password", "password!2");
+        requestBody.put( "username",username);
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 9
+    @Step("admin send POST HTTP request with empty password")
+    public void SendPOSTHTTPRequestWithEmptyPassword() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email","user66@gmail.com" );
+        requestBody.put( "password", "");
+        requestBody.put( "username","user66" );
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 10
+    @Step("admin send POST HTTP request with invalid password")
+    public void SendPOSTHTTPRequestWithInvalidPassword() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email","user55@gmail.com" );
+        requestBody.put( "password", "pass");
+        requestBody.put( "username","user55" );
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 11
+    @Step("admin send POST HTTP request with fill password with number")
+    public void SendPOSTHTTPRequestWithFillPasswordWithNumber() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email);
+        requestBody.put( "password", "12345678");
+        requestBody.put( "username",username );
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 12
+    @Step("admin send POST HTTP request with fill password with letter")
+    public void SendPOSTHTTPRequestWithFillPasswordWithLetter() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email );
+        requestBody.put( "password", "password");
+        requestBody.put( "username",username );
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+
+    //scenario 13
+    @Step("admin send POST HTTP request with fill password with combination char")
+    public void SendPOSTHTTPRequestWithFillPasswordWithCombinationChar() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email);
+        requestBody.put( "password", "Password!2");
+        requestBody.put( "username",username);
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
+    }
+    //scenario 14
+    @Step("admin send POST HTTP request with registered email")
+    public void SendPOSTHTTPRequestWithRegisteredEmail() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email","user01@gmail.com");
+        requestBody.put( "password", "Password!2");
+        requestBody.put( "username",username);
+    }
+
+    @Step("admin get error message email is already taken")
+    public void GetErrorMessageEmail() {
+        restAssuredThat(response -> response.body("message",equalTo("Error: Email is Already in User !")));
+    }
+
+    //scenario 15
+    @Step("admin send POST HTTP request with registered username")
+    public void SendPOSTHTTPRequestWithRegisteredUsername() {
+        Faker faker = new Faker();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email);
+        requestBody.put( "password", "Password!2");
+        requestBody.put( "username","user01");
+    }
+    @Step("admin get error message username is already taken")
+    public void GetErrorMessageUser() {
+        restAssuredThat(response -> response.body("message",equalTo("Error:Username is Already taken")));
     }
 }

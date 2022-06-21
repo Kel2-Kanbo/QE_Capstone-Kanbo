@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CucumberTestSuite" time="58.106" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CucumberTestSuite" time="60.349" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\bin"/>
     <property name="java.vm.version" value="25.321-b07"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\github\QE_MUHAMMAD-ADIBASYAH\miniproject\mobile"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\kampus merdeka\QE_Capstone Kanbo\capstone\mobile"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\github\QE_MUHAMMAD-ADIBASYAH\miniproject\mobile"/>
+    <property name="user.dir" value="D:\kampus merdeka\QE_Capstone Kanbo\capstone\mobile"/>
     <property name="java.runtime.version" value="1.8.0_321-b07"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\endorsed"/>
@@ -36,7 +36,7 @@
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\OPT\apache-maven-3.8.5\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\Admin"/>
-    <property name="tags" value=" @fail3R"/>
+    <property name="tags" value="@Scenario1"/>
     <property name="user.timezone" value="Asia/Bangkok"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_321\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dtags= @fail3R"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dtags=@Scenario1"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,12 +65,15 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="android user on landing screen login page" classname="As user i failed to create account with empty name" time="28.124"/>
-  <testcase name="android user click to register" classname="As user i failed to create account with empty name" time="0.192"/>
-  <testcase name="user not input name" classname="As user i failed to create account with empty name" time="1.77"/>
-  <testcase name="user input email" classname="As user i failed to create account with empty name" time="1.481"/>
-  <testcase name="user input password" classname="As user i failed to create account with empty name" time="1.772"/>
-  <testcase name="user click register button" classname="As user i failed to create account with empty name" time="0.68"/>
-  <testcase name="user get error message not input name" classname="As user i failed to create account with empty name" time="0.637"/>
-  <testcase name="As user i failed to create account with empty name" classname="As user i failed to create account with empty name" time="0.664"/>
+  <testcase name="android user on landing screen login page" classname="As user i have be able to success create account" time="31.123"/>
+  <testcase name="android user click to register" classname="As user i have be able to success create account" time="0.341"/>
+  <testcase name="user input name" classname="As user i have be able to success create account" time="3.288"/>
+  <testcase name="user input username" classname="As user i have be able to success create account" time="1.657"/>
+  <testcase name="user input email" classname="As user i have be able to success create account" time="1.571"/>
+  <testcase name="user input password" classname="As user i have be able to success create account" time="1.689"/>
+  <testcase name="user iput confirm password" classname="As user i have be able to success create account" time="1.613"/>
+  <testcase name="user click register button" classname="As user i have be able to success create account" time="1.67"/>
+  <testcase name="user click confirm email" classname="As user i have be able to success create account" time="1.982"/>
+  <testcase name="user back to login page" classname="As user i have be able to success create account" time="1.297"/>
+  <testcase name="As user i have be able to success create account" classname="As user i have be able to success create account" time="1.418"/>
 </testsuite>

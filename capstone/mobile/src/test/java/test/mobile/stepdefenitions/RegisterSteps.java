@@ -25,14 +25,14 @@ public class RegisterSteps {
     }
 
     @And("user input name")
-    public void userInputName() {
+    public void userInputName() throws InterruptedException {
         registerPage.inputName("ucup");
     }
     @And("user input username")
     public void userInputUsername() {
         Random rand = new Random();
         int number = rand.nextInt(1000000);
-        registerPage.inputUsernaame("user"+String.valueOf(number));
+        registerPage.inputUsername("user"+String.valueOf(number));
     }
 
     @And("user input email")
@@ -64,6 +64,7 @@ public class RegisterSteps {
 
     @Then("user back to login page")
     public void userBackToLoginPage() {
+        registerPage.backApp();
         registerPage.onTheLoginPage();
     }
 
