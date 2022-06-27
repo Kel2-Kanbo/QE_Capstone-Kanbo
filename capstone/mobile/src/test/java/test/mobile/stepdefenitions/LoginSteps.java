@@ -15,19 +15,18 @@ public class LoginSteps {
     //scenario1
     @Given("android user on landing screen")
     public void onLandingPage(){
-        loginPage.clickIconLogin();
         boolean actual = loginPage.onLoginPage();
         Assert.assertTrue(actual);
     }
 
     @When("android user input valid email")
     public void inputValidEmail(){
-        loginPage.inputEmail("debbb@gmail.com");
+        loginPage.inputEmail("dedeb1@gmail.com");
     }
 
     @And("android user input valid password")
     public void inputValidPassword(){
-        loginPage.inputPassword("123");
+        loginPage.inputPassword("password!2");
     }
 
     @And("android user click login button")
@@ -41,28 +40,23 @@ public class LoginSteps {
         Assert.assertTrue(actual);
     }
 
-    //scenario2
-    @When("android user input unregistered email")
-    public void androidUserInputUnregisteredEmail() {
-        loginPage.inputEmail("ucok123@gmail.com");
+    @And("android user click profile")
+    public void androidUserClickProfile() {
+        loginPage.clickProfileTab();
     }
 
-    @And("android user input password")
-    public void androidUserInputPassword() {
-        loginPage.inputPassword("123");
+    @And("android user click logout")
+    public void androidUserClickLogout() {
+        loginPage.clickLogoutButton();
     }
 
-    @And("android user tap login button")
-    public void androidUserTapLoginButton() {
-        loginPage.clickLoginButton();
+    @Then("android user on login page")
+    public void androidUserOnLoginPage() {
+        loginPage.getMessageAfterLogout();
+        loginPage.onLoginPage();
     }
 
-    @Then("android user see {string} message")
-    public void androidUserSeeMessage(String message) {
-        loginPage.getErrorMessage();
-    }
-
-    //scenario 3
+    //scenario 2
     @When("android user not input email")
     public void androidUserNotInputEmail() {
         loginPage.inputEmail("");
@@ -73,27 +67,64 @@ public class LoginSteps {
         loginPage.inputPassword("");
     }
 
-    @Then("android user see error message")
-    public void androidUserSeeErrorMessage() {
+    @Then("android user see error message on field")
+    public void androidUserSeeErrorMessageOnField() {
         loginPage.getErrorMessageEmptyEmail();
         loginPage.getErrorMessageEmptyPassword();
+    }
+
+    //scenario 3
+    @Then("android user see error message on email field")
+    public void androidUserSeeErrorMessageOnEmailField() {
+        loginPage.getErrorMessageEmptyEmail();
     }
 
     //scenario 4
-    @And("android user input invalid password")
-    public void androidUserInputInvalidPassword() {
-        loginPage.inputPassword("password12");
+    @Then("android user see error message on password field")
+    public void userSeeErrorMessageOnPasswordField() {
+        loginPage.getErrorMessageEmptyPassword2();
     }
 
-    //scenario 5
-    @Then("android user see error message empty email")
-    public void androidUserSeeErrorMessageEmptyEmail() {
-        loginPage.getErrorMessageEmptyEmail();
+    //scenario5
+    @When("android user input not registered email")
+    public void androidUserInputNotRegisteredEmail() {
+        loginPage.inputEmail("ucok123@gmail.com");
+    }
+
+    @And("android user input password")
+    public void androidUserInputPassword() {
+        loginPage.inputPassword("passwrod!2");
+    }
+
+    @And("android user tap login button")
+    public void androidUserTapLoginButton() {
+        loginPage.clickLoginButton();
+    }
+
+    @Then("android user see error message not registered email")
+    public void androidUserSeeErrorMessageNotRegisteredEmail() {
+        loginPage.getErrorNotRegisteredEmail();
     }
 
     //scenario 6
-    @Then("android user see error message empty password")
-    public void androidUserSeeErrorMessageEmptyPassword() {
-        loginPage.getErrorMessageEmptyPassword();
+    @And("android user input invalid password")
+    public void androidUserInputInvalidPassword() {
+        loginPage.inputPassword("pass");
+    }
+
+    @Then("android user see error message invalid password")
+    public void androidUserSeeErrorMessageInvalidPassword() {
+        loginPage.getErrorInvalidPassword();
+    }
+
+    //scenario 7
+    @And("android user input wrong password")
+    public void androidUserInputWrongPassword() {
+        loginPage.inputPassword("password12");
+    }
+
+    @Then("android user see error message wrong password")
+    public void androidUserSeeErrorMessageWrongPassword() {
+        loginPage.getErrorInvalidPassword();
     }
 }

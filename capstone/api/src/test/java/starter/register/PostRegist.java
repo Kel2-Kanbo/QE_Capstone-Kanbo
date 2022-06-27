@@ -2,6 +2,8 @@ package starter.register;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
@@ -202,6 +204,8 @@ public class PostRegist {
         requestBody.put( "email","user01@gmail.com");
         requestBody.put( "password", "Password!2");
         requestBody.put( "username",username);
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
     }
 
     @Step("admin get error message email is already taken")
@@ -218,9 +222,55 @@ public class PostRegist {
         requestBody.put( "email",email);
         requestBody.put( "password", "Password!2");
         requestBody.put( "username","user01");
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
     }
     @Step("admin get error message username is already taken")
     public void GetErrorMessageUser() {
         restAssuredThat(response -> response.body("message",equalTo("Error:Username is Already taken")));
+    }
+
+    //scenario 16
+    @Step("admin set invalid endpoint for register")
+    public String SetInvalidEndpointForRegister() {
+        return url + "api/auth/signup123";
+    }
+
+    @Step("admin send create account")
+    public void SendCreateAccount() {
+        Faker faker = new Faker();
+        username = faker.name().username();
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email );
+        requestBody.put( "password", "password!2");
+        requestBody.put( "username",username );
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(SetInvalidEndpointForRegister());
+    }
+
+    @Step("admin see status code {int}")
+    public void adminSeeStatusCode(int arg0) {
+        restAssuredThat(response -> response.statusCode(404));
+    }
+
+    @Step("admin get error message not found")
+    public void GetErrorMessageNotFound() {
+        restAssuredThat(response -> response.body("error",equalTo("Not Found")));
+        restAssuredThat(response -> response.body("path",equalTo("/api/auth/signup123")));
+    }
+
+    //scenario17
+    @Step("admin send POST HTTP request with maks random char")
+    public void SendPOSTHTTPRequestWithMaksRandomChar() {
+        Faker faker = new Faker();
+        username = faker.number().digits(100);
+        email = faker.internet().emailAddress();
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email",email);
+        requestBody.put( "password", "Password!2");
+        requestBody.put( "username",username);
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
     }
 }

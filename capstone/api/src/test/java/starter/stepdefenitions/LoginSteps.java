@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.apache.commons.io.output.AppendableOutputStream;
 import starter.login.Post;
 
 public class LoginSteps {
@@ -45,5 +46,83 @@ public class LoginSteps {
     @And("user get error message")
     public void userGetErrorMessage() {
         post.getErrorMessage();
+    }
+
+    //scenario 3
+    @When("user send POST HTTP request with not register email")
+    public void userSendPOSTHTTPRequestWithNotRegisterEmail() {
+        post.userSendPOSTHTTPRequestWithNotRegisterEmail();
+    }
+
+    //scenario 4
+    @When("user send POST HTTP request with invalid password")
+    public void userSendPOSTHTTPRequestWithInvalidPassword() {
+        post.userSendPOSTHTTPRequestWithInvalidPassword();
+    }
+
+    //scenario 5
+    @Given("user set invalid endpoint for login")
+    public void userSetInvalidEndpointForLogin() {
+        post.userSetInvalidEndpointForLogin();
+    }
+
+    @When("user send POST HTTP request")
+    public void userSendPOSTHTTPRequest() {
+        post.userSendPOSTHTTPRequest();
+    }
+
+    @Then("user get status code {int}")
+    public void userGetStatusCode(int arg0) {
+        post.userGetStatusCode(404);
+    }
+
+    @And("user get error message not found")
+    public void userGetErrorMessageNotFound() {
+        post.userGetErrorMessageNotFound();
+    }
+
+    //scenario 6
+    @When("user send POST HTTP request with empty email")
+    public void userSendPOSTHTTPRequestWithEmptyEmail() {
+        post.userSendPOSTHTTPRequestWithEmptyEmail();
+    }
+
+    //scenario 7
+    @When("user send POST HTTP request with empty password")
+    public void userSendPOSTHTTPRequestWithEmptyPassword() {
+        post.userSendPOSTHTTPRequestWithEmptyPassword();
+    }
+
+    //scenario 8
+    @When("user send POST HTTP request with not use @")
+    public void userSendPOSTHTTPRequestWithNotUse() {
+        post.userSendPOSTHTTPRequestWithNotUse();
+    }
+
+    //scenario 9
+    @When("user send POST HTTP request with not use domain")
+    public void userSendPOSTHTTPRequestWithNotUseDomain() {
+        post.userSendPOSTHTTPRequestWithNotUseDomain();
+    }
+
+    //scenario 10
+    @Given("admin set endpoint for login")
+    public void adminSetEndpointForLogin() {
+        post.SetEndpointForLoginAdmin();
+    }
+
+    @When("admin send POST HTTP request with valid data")
+    public void adminSendPOSTHTTPRequestWithValidData() {
+        post.SendPOSTHTTPRequestWithValidDataAdmin();
+    }
+
+    @And("admin get valid data")
+    public void adminGetValidData() {
+        post.aGetValidDataAdmin();
+    }
+
+    @Then("admin get status code {int}")
+    public void adminGetStatusCode(int arg0) {
+        post.adminGetStatusCode(200);
     }
 }

@@ -122,6 +122,12 @@ public class RegistStep {
         postRegist.GetErrorMessageEmail();
     }
 
+    //scenario17
+    @When("admin send POST HTTP request with maks random char")
+    public void adminSendPOSTHTTPRequestWithMaksRandomChar() {
+        postRegist.SendPOSTHTTPRequestWithMaksRandomChar();
+    }
+
     //scenario 15
     @When("admin send POST HTTP request with registered username")
     public void adminSendPOSTHTTPRequestWithRegisteredUsername() {
@@ -131,5 +137,26 @@ public class RegistStep {
     @And("admin get error message username is already")
     public void adminGetErrorMessageUsernameIsAlready() {
         postRegist.GetErrorMessageUser();
+    }
+
+    //scenario 16
+    @Given("admin set invalid endpoint for register")
+    public void adminSetInvalidEndpointForRegister() {
+        postRegist.SetInvalidEndpointForRegister();
+    }
+
+    @When("admin send create account")
+    public void adminSendCreateAccount() {
+        postRegist.SendCreateAccount();
+    }
+
+    @Then("admin see status code {int}")
+    public void adminSeeStatusCode(int arg0) {
+        postRegist.adminSeeStatusCode(404);
+    }
+
+    @And("admin get error message not found")
+    public void adminGetErrorMessageNotFound() {
+        postRegist.GetErrorMessageNotFound();
     }
 }

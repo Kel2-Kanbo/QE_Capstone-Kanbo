@@ -142,7 +142,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"As user I want to create account So that i can login and see homepage","type":"feature","href":"1c69d6de5898e9b1dff0ca783b29165175121f3e417ebc120ad5f101901ad526.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
+            var requirementsTree = [];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -212,7 +212,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-06-2022 01:39</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -226,23 +226,11 @@
                     <div>
                         <div clas="table">
                             <div class="row">
-                                <div class="col-sm-8">
+                                    <div class="col-sm-12">
                                         <span>
                                             <h2><i class="bi bi-book"></i> Feature:  As User I Want To Create Account So That I Can Login And See Homepage</h2>
                                         </span>
                                     </div>
-                                        <div class="col-sm-4">
-                                        <span class="feature-tags">
-                                                <p class="tag">
-                                                    <span class="badge tag-badge" style="background:default;">
-                                                        <i class="bi bi-tag"></i>&nbsp;<a class="tagLink"
-                                                                                          style="background:default;"
-                                                                                          href="e4ef4831a220e0a9cbdbfec794f5c31b3fef2adf1cb8126df1cc35a6f525969c.html">Scenario1
-                                                        (tag)</a>
-                                                    </span>
-                                                </p>
-                                        </span>
-                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -275,79 +263,10 @@
                                         <div class="row">
                                             <div class="col-sm-12">
 
-                                                    <!--- TOC --->
-                                                    <div id="toc">
-                                                        <h3>Overview</h3>
-                                                        <table class="table" id="toc-table">
-                                                                        <tr>
-                                                                            <td style="width:95%;" class="toc-title">
-                                                                                <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#80298f66e932bfa0825ddec2e7f502b9a574c10e6c252460ca4cc85397da181f"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: As user i have be able to success create account
-                                                                                    </a>
-                                                                                </span>
-                                                                            </td>
-                                                                            <td style="width:5%;">
-                                                                                <table>
-                                                                                    <tr>
-                                                                                        <td class="icons-bar">
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="8a21270dbe3142a8cb7ff4354e28a50721fede5f6dd2ba334bd9815a194f6d97.html"
-                                                                                               title="View test results">
-                                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                                </a>
+                                                    <h3>Requirements Overview</h3>
 
+                                                    <div id="tree"></div>
 
-                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                                   href="8a21270dbe3142a8cb7ff4354e28a50721fede5f6dd2ba334bd9815a194f6d97.html"
-                                                                                                   title="View test results">
-                                                                                                    <i class="bi bi-eyeglasses"></i>
-                                                                                                </a>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                        </table>
-                                                    </div>
-                                                    <!--- END OF TOC --->
-
-                                                    <h3>Scenarios</h3>
-
-                                                        <a name="b1750d88-a7b2-4104-97fa-3d3f0d5ba0b9"></a>
-
-
-                                                            <div class="scenario-docs card" id="80298f66e932bfa0825ddec2e7f502b9a574c10e6c252460ca4cc85397da181f">
-                                                                <div class="scenario-docs card-header success"
-                                                                     style="min-height:1.5em;">
-                                                                    <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="8a21270dbe3142a8cb7ff4354e28a50721fede5f6dd2ba334bd9815a194f6d97.html"
-                                                                   title="View test results">Scenario: As user i have be able to success create account</a>
-                                                            </span>
-                                                                        <span class="scenario-result-icon">
-                                                                
-
-                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                            </span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given android user on landing screen login page</p>
-                                                                        <p>When android user click to register</p>
-                                                                        <p>And user input name</p>
-                                                                        <p>And user input username</p>
-                                                                        <p>And user input email</p>
-                                                                        <p>And user input password</p>
-                                                                        <p>And user iput confirm password</p>
-                                                                        <p>And user click register button</p>
-                                                                        <p>And user click confirm email</p>
-                                                                        <p>Then user back to login page</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -356,41 +275,7 @@
                                 <div id="results" class="tab-pane fade">
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-sm-4">
-
-                                                <div style="width:300px;" class="chart-container automated-and-manual-results">
-                                                    <div class="ct-chart ct-square"></div>
-                                                </div>
-                                                <script>
-
-                                                    var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-                                                    // Our series array that contains series objects or in this case series data arrays
-
-                                                    var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Aborted tests (automated)', value: 0}, {meta: 'Aborted tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
-
-                                                    // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                    // as you saw in the previous example
-                                                    var options = {
-                                                        width: 350,
-                                                        height: 300
-                                                    };
-
-                                                    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                        new Chartist.Pie('.ct-chart', {
-                                                            series: series,
-                                                            labels: labels,
-                                                        }, {
-                                                            donut: true,
-                                                            donutWidth: 60,
-                                                            donutSolid: true,
-                                                            startAngle: 270,
-                                                            showLabel: true
-                                                        }, options);
-                                                    });
-
-                                                </script>
-                                            </div>
-                                            <div class="col-sm-8">
+                                                <div class="col-sm-12">
 
                                                     <table class="table">
                                                         <thead>
@@ -405,12 +290,11 @@
                                                         </thead>
                                                         <tbody>
                                                         <tr>
-                                                                <td class="aggregate-result-count">
-                                                                    <a href="be8a7f9a5f741fcf34408dfd58ba0402b20436e80d075fdc625524c774c6ef00.html"><i
-                                                                                class='bi bi-check-circle-fill success-icon'></i>&nbsp;Passing</a>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-check-circle-fill success-icon'></i>&nbsp;Passing
                                                                 </td>
-                                                            <td class="automated-stats">1</td>
-                                                            <td class="automated-stats">100%</td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
                                                         </tr>
                                                         <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -471,7 +355,7 @@
                                                         </tr>
                                                         <tr class="summary-stats">
                                                             <td class="aggregate-result-count">Total</td>
-                                                            <td class="automated-stats">1</td>
+                                                            <td class="automated-stats">0</td>
                                                             <td class="automated-stats"></td>
                                                         </tr>
                                                         </tbody>
@@ -495,13 +379,13 @@
                                                         </thead>
                                                         <tbody>
                                                         <tr>
-                                                            <td>22-06-2022 01:39:17 +0700</td>
-                                                            <td>22-06-2022 01:40:04 +0700</td>
-                                                            <td>46s</td>
-                                                            <td>46s</td>
-                                                            <td>46s</td>
-                                                            <td>46s</td>
-                                                            <td>46s</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>0ms</td>
+                                                            <td>0ms</td>
+                                                            <td>0ms</td>
+                                                            <td>0ms</td>
+                                                            <td>0ms</td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -513,32 +397,7 @@
                                                 <div class="col-sm-12">
                                                     <h3><i class="bi bi-gear"></i> Automated Tests</h3>
 
-                                                        <table class="scenario-result-table table"
-                                                               id="scenario-results">
-                                                            <thead>
-                                                            <tr>
-                                                                <th class="test-name-column">Scenario</th>
-                                                                <th>Steps</th>
-                                                                <th>Started</th>
-                                                                <th>Duration</th>
-                                                                <th>Result</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr class="scenario-result SUCCESS">
-                                                                    <td>
-                                                                            <a href="8a21270dbe3142a8cb7ff4354e28a50721fede5f6dd2ba334bd9815a194f6d97.html">As user i have be able to success create account</a>
-                                                                    </td>
-                                                                    <td>10</td>
-                                                                    <td>01:39:17</td>
-                                                                    <td>46s 640ms</td>
-                                                                    <td>
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                        No automated tests were executed
 
                                                 </div>
                                             </div>

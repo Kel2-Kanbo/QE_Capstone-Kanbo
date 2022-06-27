@@ -48,17 +48,50 @@ public class RegisterPage extends BasePageObject {
     private By homePage(){
         return MobileBy.xpath("//android.view.View[@content-desc=\"Products\"]");
     }
-    private By errorNoEmail(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+    private By errorNoName() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Can not be empty\"]");
     }
-    private By errorNoFullname(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
+    private By errorNoUsername() {
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])[2]");
+    }
+    private By errorNoUsername2() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Can not be empty\"]");
+    }
+    private By errorNoEmail(){
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])[3]");
+    }
+    private By errorNoEmail2(){
+        return MobileBy.AccessibilityId("Can not be empty");
     }
     private By errorNoPassword(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[3]");
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])[4]");
     }
-    private By errorRegistered(){
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Gagal :(\"]");
+    private By errorNoPassword2(){
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])");
+    }
+    private By errorNoConfirmPassword(){
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])[5]");
+    }
+    private By errorNoConfirmPassword2(){
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])");
+    }
+    private By errorNotSamePassword(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Password must be the same\"]");
+    }
+    private By errorRegisteredEmail(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Error: Email is Already in User !\"]");
+    }
+    private By errorRegisteredUsrname(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Error:Username is Already taken\"]");
+    }
+    private By errorInvalidEmail(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"This field requires a valid email address.\"]");
+    }
+    private By errorInvalidPassword(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Value must have a length greater than or equal to 8\"]");
+    }
+    private By errorPasswordMaxChar(){
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Value must have a length less than or equal to 40\"])[1]");
     }
 
     @Step
@@ -110,23 +143,77 @@ public class RegisterPage extends BasePageObject {
     }
 
     @Step
-    public boolean backOnTheHomePage(){
-        return waitUntilVisible(homePage()).isDisplayed();
+    public boolean errorMessageNoName(){
+        return waitUntilVisible(errorNoName()).isDisplayed();
     }
+
+    @Step
+    public boolean errorMessageNoUserame(){
+        return waitUntilVisible(errorNoUsername()).isDisplayed();
+    }
+
+    @Step
+    public boolean errorMessageNoUserame2(){
+        return waitUntilVisible(errorNoUsername2()).isDisplayed();
+    }
+
     @Step
     public boolean errorMessageNoEmail(){
         return waitUntilVisible(errorNoEmail()).isDisplayed();
     }
+
+    @Step
+    public boolean errorMessageNoEmail2(){
+        return waitUntilVisible(errorNoEmail2()).isDisplayed();
+    }
+
     @Step
     public boolean errorMessageNoPassword(){
         return waitUntilVisible(errorNoPassword()).isDisplayed();
     }
+
     @Step
-    public boolean errorMessageNoName(){
-        return waitUntilVisible(errorNoFullname()).isDisplayed();
+    public boolean errorMessageNoPassword2(){
+        return waitUntilVisible(errorNoPassword2()).isDisplayed();
     }
+
     @Step
-    public boolean errorMessageRegistered(){
-        return waitUntilVisible(errorRegistered()).isDisplayed();
+    public boolean errorMessageNoConfirmPassword(){
+        return waitUntilVisible(errorNoConfirmPassword()).isDisplayed();
+    }
+
+    @Step
+    public boolean errorMessageNoConfirmPassword2(){
+        return waitUntilVisible(errorNoConfirmPassword2()).isDisplayed();
+    }
+
+    @Step
+    public boolean errorMessageRegisteredEmail(){
+        return waitUntilVisible(errorRegisteredEmail()).isDisplayed();
+    }
+
+    @Step
+    public boolean errorMessageRegisteredUsername(){
+        return waitUntilVisible(errorRegisteredUsrname()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorInvalidEmail(){
+        return waitUntilVisible(errorInvalidEmail()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorNotSamePassword(){
+        return waitUntilVisible(errorNotSamePassword()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorInvalidPassword(){
+        return waitUntilVisible(errorInvalidPassword()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorMaxCharPass(){
+        return waitUntilVisible(errorPasswordMaxChar()).isDisplayed();
     }
 }

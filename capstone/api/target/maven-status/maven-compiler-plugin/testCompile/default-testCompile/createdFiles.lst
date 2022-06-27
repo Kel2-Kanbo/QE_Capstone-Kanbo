@@ -1,5 +1,11 @@
-starter\CucumberTestSuite.class
-starter\stepdefenitions\RegistStep.class
 starter\register\PostRegist.class
 starter\login\Post.class
+starter\stepdefenitions\CitySteps.class
+starter\manage\district\GetDistrict.class
 starter\stepdefenitions\LoginSteps.class
+starter\CucumberTestSuite.class
+starter\stepdefenitions\RegistStep.class
+starter\manage\city\GetCity.class
+starter\stepdefenitions\DistrictSteps.class
+starter\manage\district\PostDistrict.class
+starter\manage\city\PostCity.class

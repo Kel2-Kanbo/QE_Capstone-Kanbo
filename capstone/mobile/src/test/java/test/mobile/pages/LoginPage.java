@@ -7,46 +7,61 @@ import test.mobile.pageobject.BasePageObject;
 
 
 public class LoginPage extends BasePageObject {
+    public void timeDelay(long t) {
+        try {
+            Thread.sleep(t);
+        } catch (InterruptedException e) {}
+    }
+
     private By homePage(){
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Products\"]");
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Let's find your place for work\"]");
     }
     private By loginPage(){
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Login\"]");
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Login to continue!\"]");
     }
 
-    private By iconLogin(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
-    }
-    private By emailField(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]");
+    private By emailField() {
+        return MobileBy.xpath("//android.widget.EditText[1]");
     }
 
-    private By passwordField(){
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]");
+    private By passwordField() {
+        return MobileBy.xpath("//android.widget.EditText[2]");
     }
-
     private By loginButton(){
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Login\"]");
     }
 
-    private By errorMessage(){
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Email atau password tidak valid.\"]");
+    private By errorMessageInvalidEmail(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"This field requires a valid email address.\"]");
     }
     private By errorMessageEmptyemail(){
-        return MobileBy.xpath( "//android.view.View[@content-desc=\"email can not empty\"]");
+        return MobileBy.xpath( "//android.view.View[@content-desc=\"Can not be empty\"]");
     }
     private By errorMessageEmptypassword(){
-        return MobileBy.xpath("//android.view.View[@content-desc=\"password can not empty\"]");
+        return MobileBy.xpath("(//android.view.View[@content-desc=\"Can not be empty\"])[2]");
+    }
+    private By errorMessageEmptypassword2(){
+        return MobileBy.AccessibilityId("Can not be empty");
+    }
+    private By errorMessagePassIsLessMaxChar(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Email atau password tidak sesuai\"]");
+    }
+    private By errorNotRegisteredEmail(){
+        return MobileBy.AccessibilityId("Email atau password tidak sesuai");
+    }
+    private By profilTab(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Profile Tab 4 of 4\"]");
+    }
+    private By logotuButton(){
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Log Out\"]");
+    }
+    private By messageLogout(){
+        return MobileBy.xpath("//android.view.View[@content-desc=\"You've been signed out!\"]");
     }
 
     @Step
     public boolean onHomePage(){
         return waitUntilVisible(homePage()).isDisplayed();
-    }
-
-    @Step
-    public void clickIconLogin(){
-        onClick(iconLogin());
     }
 
     @Step
@@ -72,15 +87,46 @@ public class LoginPage extends BasePageObject {
     }
 
     @Step
-    public String getErrorMessage(){
-        return waitUntilVisible(errorMessage()).getText();
+    public void clickProfileTab(){
+        timeDelay(2000);
+        onClick(profilTab());
     }
     @Step
-    public String getErrorMessageEmptyEmail(){
-        return waitUntilVisible(errorMessageEmptyemail()).getText();
+    public void clickLogoutButton(){
+        onClick(logotuButton());
+    }
+
+    @Step
+    public String getErrorMessageInvalidEmail(){
+        return waitUntilVisible(errorMessageInvalidEmail()).getText();
+    }
+
+    @Step
+    public boolean getErrorMessageEmptyEmail(){
+        return waitUntilVisible(errorMessageEmptyemail()).isDisplayed();
     }
     @Step
-    public String getErrorMessageEmptyPassword(){
-        return waitUntilVisible(errorMessageEmptypassword()).getText();
+    public boolean getErrorMessageEmptyPassword(){
+        return waitUntilVisible(errorMessageEmptypassword()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorMessageEmptyPassword2(){
+        return waitUntilVisible(errorMessageEmptypassword2()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorNotRegisteredEmail(){
+        return waitUntilVisible(errorNotRegisteredEmail()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorInvalidPassword(){
+        return waitUntilVisible(errorMessagePassIsLessMaxChar()).isDisplayed();
+    }
+
+    @Step
+    public boolean getMessageAfterLogout(){
+        return waitUntilVisible(messageLogout()).isDisplayed();
     }
 }

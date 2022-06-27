@@ -31,14 +31,14 @@ public class RegisterSteps {
     @And("user input username")
     public void userInputUsername() {
         Random rand = new Random();
-        int number = rand.nextInt(1000000);
+        int number = rand.nextInt(1000);
         registerPage.inputUsername("user"+String.valueOf(number));
     }
 
     @And("user input email")
     public void userInputEmail() {
         Random rand = new Random();
-        int number = rand.nextInt(1000000);
+        int number = rand.nextInt(1000);
         registerPage.inputEmail("user"+String.valueOf(number)+"@gmail.com");
     }
 
@@ -47,8 +47,8 @@ public class RegisterSteps {
         registerPage.inputPassword("password!2");
     }
 
-    @And("user iput confirm password")
-    public void userIputConfirmPassword() {
+    @And("user input confirm password")
+    public void userInputConfirmPassword() {
         registerPage.inputConfirmPassword("password!2");
     }
 
@@ -86,53 +86,128 @@ public class RegisterSteps {
 
     @Then("user get error message")
     public void userGetErrorMessage() {
-        registerPage.errorMessageNoEmail();
         registerPage.errorMessageNoName();
+        registerPage.errorMessageNoUserame();
+        registerPage.errorMessageNoEmail();
         registerPage.errorMessageNoPassword();
+        registerPage.errorMessageNoConfirmPassword();
+    }
+    //scenario 3
+    @And("user input email with not input @")
+    public void userInputEmailWithNotInput() {
+        registerPage.inputEmail("dedeb1gmail.com");
     }
 
-    //scenario 3
+    @Then("user get error message invalid email")
+    public void userGetErrorMessageInvalidEmail() {
+        registerPage.getErrorInvalidEmail();
+    }
+
+    //scenario 4
+    @And("user input password with input password less than six char")
+    public void userInputPasswordWithInputPasswordLessThanSixChar() {
+        registerPage.inputPassword("123456");
+    }
+    @Then("user get error message invalid password")
+    public void userGetErrorMessageInvalidPassword() {
+        registerPage.getErrorInvalidPassword();
+        registerPage.getErrorNotSamePassword();
+    }
+
+    //scenario 5
+    @Then("user get error message empty email")
+    public void getErrorMessageEmptyEmail() {
+        registerPage.errorMessageNoEmail2();
+    }
+
+    //scenario 6
+    @And("user not input username")
+    public void userNotInputUsername() {
+        registerPage.inputUsername("");
+    }
+    @Then("user get error message empty username")
+    public void userGetErrorMessageEmptyUsername() {
+        registerPage.errorMessageNoUserame2();
+    }
+
+    //scenario 7
+    @Then("user get error message empty password")
+    public void userGetErrorMessageEmptyPassword() {
+        registerPage.errorMessageNoPassword2();
+    }
+
+    //scenario 8
+    @Then("user get error message empty name")
+    public void userGetErrorMessageEmptyName() {
+        registerPage.errorMessageNoName();
+    }
+
+    //scenario 9
+    @And("user not input confirm password")
+    public void userNotInputConfirmPassword() {
+        registerPage.inputConfirmPassword("");
+    }
+    @Then("user get error message empty confirm password")
+    public void userGetErrorMessageEmptyConfirmPassword() {
+        registerPage.errorMessageNoConfirmPassword2();
+    }
+
+    //scenario 10
+    @And("user input registered username")
+    public void userInputRegisteredUsername() {
+        registerPage.inputUsername("dedeb1");
+    }
+    @Then("user get error message username is already taken")
+    public void userGetErrorMessageUsernameIsAlreadyTaken() {
+        registerPage.errorMessageRegisteredUsername();
+    }
+
+    //scenario 11
     @And("user input registered email")
     public void userInputRegisteredEmail() {
-        registerPage.inputEmail("debbb@gmail.com");
+        registerPage.inputEmail("dedeb1@gmail.com");
     }
 
     @Then("user get error message {string}")
     public void userGetErrorMessage(String error) {
-        registerPage.errorMessageRegistered();
+        registerPage.errorMessageRegisteredEmail();
     }
 
-    //scenario 4
-    @Then("user get error message not input name")
-    public void userGetErrorMessageNotInputName() {
-        registerPage.errorMessageNoName();
+    //scenario 12
+    @And("user input different confirm password")
+    public void userInputDifferentConfirmPassword() {
+        registerPage.inputConfirmPassword("123456789");
     }
 
-    //scenario 5
-    @Then("user get error message not input email")
-    public void userGetErrorMessageNotInputEmail() {
-        registerPage.errorMessageNoEmail();
+    @Then("user get error message password not same")
+    public void userGetErrorMessagePasswordNotSame() {
+        registerPage.getErrorNotSamePassword();
     }
 
-    //scenario 6
-    @Then("user get error message not input password")
-    public void userGetErrorMessageNotInputPassword() {
-        registerPage.errorMessageNoPassword();
+    //scenario13
+    @And("user input password with input max char password")
+    public void userInputPasswordWithInputMaxCharPassword() {
+        registerPage.inputPassword("1234567890qwertyuiopasdfghjklzxcvbnm,./l;'[]=");
+    }
+    @And("user input confirm password max char")
+    public void userInputConfirmPasswordMaxChar() {
+        registerPage.inputConfirmPassword("1234567890qwertyuiopasdfghjklzxcvbnm,./l;'[]=");
     }
 
-    @And("user not input username")
-    public void userNotInputUsername() {
+    @Then("user get error message password max char")
+    public void userGetErrorMessagePasswordMaxChar() {
+        registerPage.getErrorMaxCharPass();
     }
 
-    @And("user not input confirm password")
-    public void userNotInputConfirmPassword() {
+    //scenario14
+    @And("user input email with input email not use domain")
+    public void userInputEmailWithInputEmailNotUseDomain() {
+        registerPage.inputEmail("adeb@gmail");
     }
 
-    @And("user input confirm password")
-    public void userInputConfirmPassword() {
+    @Then("user get error message not use domain")
+    public void userGetErrorMessageNotUseDomain() {
+        registerPage.getErrorInvalidEmail();
     }
 
-    @And("user input registered username")
-    public void userInputRegisteredUsername() {
-    }
 }

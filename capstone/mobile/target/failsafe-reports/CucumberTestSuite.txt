@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.349 sec - in CucumberTestSuite
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 2, Time elapsed: 53.843 sec <<< FAILURE! - in CucumberTestSuite
+android user click profile(As a user i have be able to success login)  Time elapsed: 17.252 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
+Session ID: 30804246-f6a8-475c-abbe-3bd8f41587bc
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+
+As a user i have be able to success login  Time elapsed: 0.005 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
+Session ID: 30804246-f6a8-475c-abbe-3bd8f41587bc
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+
