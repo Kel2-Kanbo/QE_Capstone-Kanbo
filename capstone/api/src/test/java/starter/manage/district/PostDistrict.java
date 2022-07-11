@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.simple.JSONObject;
@@ -15,6 +16,29 @@ import static starter.manage.city.GetCity.url;
 public class PostDistrict {
 
     private String name = "";
+    public String token = "";
+
+    //backgorund
+    @Step("admin set endpoint for login admin")
+    public String adminSetEndpointLoginAsAdmin() {
+        return url + "api/auth/signin";
+    }
+
+    @Step("admin input authorization")
+    public void adminInputAuthorization() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put( "email","admin01@gmail.com");
+        requestBody.put( "password","password!2");
+
+        SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(adminSetEndpointLoginAsAdmin());
+        Response resp = SerenityRest.lastResponse();
+        token = resp.getBody().jsonPath().get("token");
+    }
+
+    @Step("admin send auth endpoint")
+    public void adminSendAuthToAddDistrict(){
+        SerenityRest.given().header("Authorization", "Bearer "+token).post(setEndpointForAddDistrict());
+    }
 
     //scenario3
     @Step("admin set endpoint for add district")
@@ -24,7 +48,7 @@ public class PostDistrict {
 
     @Step("admin send POST HTTP request with valid data district")
     public void sendPOSTHTTPRequestWithValidDataDistrict() {
-        Faker faker = new Faker();
+    Faker faker = new Faker();
         name = faker.commerce().productName();
         JSONObject requestBody = new JSONObject();
         requestBody.put("city_id",1);

@@ -24,7 +24,7 @@ public class Post {
     @Step("user send POST HTTP request")
     public void sendPostHttpRequest(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put( "username","user015@gmail.com");
+        requestBody.put( "email","user015@gmail.com");
         requestBody.put( "password","password!2");
 
       SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsLogin());
@@ -49,8 +49,8 @@ public class Post {
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsLogin());
     }
     @Step("user receive HTTP response code 400")
-    public void receiveResponseCode400(){
-        restAssuredThat(response -> response.statusCode(400));
+    public void receiveResponseCode(int arg0){
+        restAssuredThat(response -> response.statusCode(arg0));
 
     }
     @Step("user get error message")
@@ -67,6 +67,16 @@ public class Post {
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsLogin());
     }
+    @Step("user receive HTTP response code 401")
+    public void receiveResponseCode401(){
+        restAssuredThat(response -> response.statusCode(401));
+    }
+
+    @Step("user get error message unauthorized")
+    public void getErrorMessageUnauthorized(){
+        restAssuredThat(response -> response.body("error",equalTo("Unauthorized")));
+    }
+
 
     //scenario 4
     @Step("user send POST HTTP request with invalid password")
@@ -151,7 +161,7 @@ public class Post {
     @Step("admin send POST HTTP request with valid data admin")
     public void SendPOSTHTTPRequestWithValidDataAdmin() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put( "username","admin01@gmail.com");
+        requestBody.put( "email","admin01@gmail.com");
         requestBody.put( "password","password!2");
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(SetEndpointForLoginAdmin());

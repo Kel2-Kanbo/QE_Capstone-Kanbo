@@ -1,8 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"As a admin I want to manage city",": As admin i want to login so that i can manage city","SUCCESS","2022-06-24T18:59:59.714+07:00[Asia/Bangkok]","0.0","10.38"
-"As a admin I want to manage city","As admin i want to see all list city with valid endpoint","FAILURE","2022-06-24T19:00:10.143+07:00[Asia/Bangkok]","0.0","1.0"
-"As a admin I want to manage city","As admin i want to see all list city with invalid endpoint","SUCCESS","2022-06-24T19:00:11.169+07:00[Asia/Bangkok]","0.0","0.76"
-"As a admin I want to manage city","As admin i want to create new city with valid endpoint","FAILURE","2022-06-24T19:00:11.944+07:00[Asia/Bangkok]","0.0","1.74"
-"As a admin I want to manage city","As admin i want to create new city with invalid endpoint","SUCCESS","2022-06-24T19:00:13.705+07:00[Asia/Bangkok]","0.0","1.03"
-"As a admin I want to manage city","As admin i want to create new city with invalid input data","FAILURE","2022-06-24T19:00:14.755+07:00[Asia/Bangkok]","0.0","1.18"
-"As a admin I want to manage city","As admin i want to create new city with same name","FAILURE","2022-06-24T19:00:15.958+07:00[Asia/Bangkok]","0.0","1.06"

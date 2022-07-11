@@ -17,7 +17,7 @@ public class LoginSteps {
     @Given("i am on the login page")
     public void onLoginPage(){
         loginPage.openPage();
-        loginPage.clickLoginIcon();
+        loginPage.validationOnloginPage();
     }
 
     @When("i input valid email")
@@ -27,7 +27,7 @@ public class LoginSteps {
 
     @And("i input valid password")
     public void inputValidPassword(){
-        loginPage.inputPassword("123");
+        loginPage.inputPassword("password!2");
     }
 
     @And("i click login button")
@@ -41,30 +41,6 @@ public class LoginSteps {
     }
 
     //scenario 2
-    @When("i input invalid password")
-    public void inputInvalidPassword(){
-        loginPage.inputPassword("dedeb140700");
-    }
-
-    @Then("i failed to login and get error message {string}")
-    public void iFailedToLoginAndGetErrorMessage(String message) {
-        loginPage.getInvalidMessage();
-    }
-
-    //scenario 3
-
-    @When("i input invalid email")
-    public void iInputInvalidEmail() {
-        loginPage.inputEmail("debb@fsg");
-    }
-
-    @Then("i fail to login and get error message {string}")
-    public void iFailToLoginAndGetErrorMessage(String message) {
-        loginPage.getMessageNoRecord();
-    }
-
-
-    //scenario 4
     @When("i not input username and password")
     public void notInputUsernamePassword(){
         loginPage.inputPassword("");
@@ -73,7 +49,60 @@ public class LoginSteps {
 
     @Then("i get error message {string}")
     public void iGetErrorMessage(String message) {
-        loginPage.getErrorMessage();
+    }
+
+    //scenario 3
+    @When("i not input email")
+    public void iNotInputEmail() {
+        loginPage.inputEmail("");
+    }
+
+    @Then("i failed to login and get error message")
+    public void iFailedToLoginAndGetErrorMessage() {
+    }
+
+    //scenario 4
+    @And("i not input password")
+    public void iNotInputPassword() {
+        loginPage.inputPassword("");
+    }
+
+    //scenario 5
+    @When("i input invalid email")
+    public void iInputInvalidEmail() {
+        loginPage.inputEmail("debb@fsg");
+    }
+
+    @Then("i fail to login and get error message invalid email")
+    public void iFailToLoginAndGetErrorMessageInvalidEmail() {
+        loginPage.getErrorMessageEmailInvalid();
+    }
+
+    //scenario 6
+    @And("i input wrong password")
+    public void iInputWrongPassword() {
+        loginPage.inputPassword("password12");
+    }
+
+    @Then("i failed to login and get error message on password")
+    public void iFailedToLoginAndGetErrorMessageOnPassword() {
+    }
+
+    //scenario 7
+    @When("i input invalid email with not use domain")
+    public void iInputInvalidEmailWithNotUseDomain() {
+        loginPage.inputEmail("dedeb123@");
+    }
+
+    //scenario 8
+    @When("i input invalid password")
+    public void inputInvalidPassword(){
+        loginPage.inputPassword("dedeb");
+    }
+
+    @Then("i failed to login and get error message less char on password")
+    public void iFailedToLoginAndGetErrorMessageLessCharOnPassword() {
+        loginPage.getErrorMessagePasswordLessChar();
     }
 
 }

@@ -1,9 +1,14 @@
 @district
 Feature: As admin i want to manage district
 
+  Background:
+    Given admin set endpoint for login admin
+    When admin input authorization
+
+  @scenario1D
   Scenario: As admin i want to see all list district with valid endpoint
     Given admin set endpoint for get district
-    When admin send request district
+    And admin send request district
     Then admin get status code 200 on district
     And admin get list district
 

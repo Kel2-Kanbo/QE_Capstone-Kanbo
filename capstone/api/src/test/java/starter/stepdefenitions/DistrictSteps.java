@@ -16,6 +16,18 @@ public class DistrictSteps {
     @Steps
     PostDistrict postDistrict;
 
+
+    @Given("admin set endpoint for login admin")
+    public void adminSetEndpointForLoginAdmin() {
+        postDistrict.adminSetEndpointLoginAsAdmin();
+    }
+
+    @When("admin input authorization")
+    public void adminInputAuthorization() {
+        postDistrict.adminInputAuthorization();
+        postDistrict.adminSendAuthToAddDistrict();
+    }
+
     //scenario1
     @Given("admin set endpoint for get district")
     public void adminSetEndpointGetDistrict(){
@@ -97,4 +109,6 @@ public class DistrictSteps {
     public void adminSendPOSTHTTPRequestWithInputNameByInteger() {
         postDistrict.sendPOSTHTTPRequestWithInputNameByInteger();
     }
+
+
 }

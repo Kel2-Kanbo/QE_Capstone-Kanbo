@@ -8,31 +8,27 @@ public class LoginPage extends PageObject {
 
     //element
     private By emailField(){
-        return By.xpath("//label[contains(text(),'Email')]/following-sibling::input");
+        return By.xpath("(//input[@class='peer css-1hktf9i'])[1]");
     }
 
     private By passwordField(){
-        return By.xpath("//label[contains(text(),'Password')]/following-sibling::input");
+        return By.xpath("(//input[@class='peer css-1hktf9i'])[2]");
     }
 
     private By loginButton(){
-        return By.xpath("(//span[@class='v-btn__content'])[3]");
-    }
-
-    private By loginIcon(){
-        return By.xpath("(//button[@class='v-btn v-btn--icon v-btn--round theme--dark v-size--default'])[2]");
+        return By.xpath("//button[text()='Login']");
     }
 
     private By onHomePage(){
         return By.className("v-toolbar__title");
     }
 
-    private By errorMessage(){
-        return By.className("v-alert__wrapper");
+    private By errorMessageEmail(){
+        return By.xpath("//p[text()='Email must be valid']");
     }
 
-    private By errorMessageInvalid(){
-        return By.className("v-alert__content");
+    private By errorMessagePasswordLessChar(){
+        return By.xpath("//p[text()='Must contain at least 6 or more characters']");
     }
 
     private By errorMessageNotRecord(){
@@ -47,8 +43,8 @@ public class LoginPage extends PageObject {
     }
 
     @Step
-    public void clickLoginIcon(){
-        $(loginIcon()).click();
+    public void validationOnloginPage(){
+        $(loginButton()).isDisplayed();
     }
 
     @Step
@@ -72,13 +68,13 @@ public class LoginPage extends PageObject {
     }
 
     @Step
-    public boolean getErrorMessage(){
-        return $(errorMessage()).isDisplayed();
+    public boolean getErrorMessageEmailInvalid(){
+        return $(errorMessageEmail()).isDisplayed();
     }
 
     @Step
-    public boolean getInvalidMessage(){
-        return $(errorMessageInvalid()).isDisplayed();
+    public boolean getErrorMessagePasswordLessChar(){
+        return $(errorMessagePasswordLessChar()).isDisplayed();
     }
 
     @Step

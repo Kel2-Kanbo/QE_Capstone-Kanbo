@@ -19,15 +19,15 @@ Feature: As user I want to see home page So that i can booking office
   Scenario: POST - As a user I failed to login with not register email
     Given user set endpoint for login
     When user send POST HTTP request with not register email
-    Then user see status code 401 and fail to login
-    And user get error message
+    Then user see status code 401 after login
+    And user get error message unauthorized
 
   @login @negative4
   Scenario: POST - As a user I failed to login with invalid password
     Given user set endpoint for login
     When user send POST HTTP request with invalid password
-    Then user see status code 401 and fail to login
-    And user get error message
+    Then user see status code 401 after login
+    And user get error message unauthorized
 
   @login @negative5
   Scenario: POST - As a user I failed to login with invalid endpoint
@@ -54,15 +54,15 @@ Feature: As user I want to see home page So that i can booking office
   Scenario: POST - As a user I failed to login with not use @
     Given user set endpoint for login
     When user send POST HTTP request with not use @
-    Then user see status code 400 and fail to login
-    And user get error message
+    Then user see status code 401 after login
+    And user get error message unauthorized
 
   @login @negative9
   Scenario: POST - As a user I failed to login with not use domain
     Given user set endpoint for login
     When user send POST HTTP request with not use domain
-    Then user see status code 400 and fail to login
-    And user get error message
+    Then user see status code 401 after login
+    And user get error message unauthorized
 
   @login @positive10
   Scenario: POST - As a admin I success to login with valid data

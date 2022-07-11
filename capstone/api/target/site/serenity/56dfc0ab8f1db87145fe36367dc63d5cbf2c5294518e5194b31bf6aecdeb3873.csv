@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"As admin i want to create account So that i can login and see home page","POST - As a admin I failed to create account with invalid password","SUCCESS","2022-07-03T08:12:29.513+07:00[Asia/Bangkok]","0.0","0.71"

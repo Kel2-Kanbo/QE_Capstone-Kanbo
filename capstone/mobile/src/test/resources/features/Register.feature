@@ -1,7 +1,7 @@
 @register
 Feature: As user I want to create account So that i can login and see homepage
 
-  @Scenario1
+  @Scenario1 @broken
   Scenario: As user i have be able to success create account
     Given android user on landing screen login page
     When android user click to register
@@ -62,7 +62,7 @@ Feature: As user I want to create account So that i can login and see homepage
 #    And user click register button
     Then user get error message empty email
 
-  @fail5 @empty
+  @fail5 @empty @broken
   Scenario: As user i failed to create account with empty username
     Given android user on landing screen login page
     When android user click to register
@@ -74,7 +74,7 @@ Feature: As user I want to create account So that i can login and see homepage
 #    And user click register button
     Then user get error message empty username
 
-  @fail6 @empty1
+  @fail6 @empty1 @broken
   Scenario: As user i failed to create account with empty password
     Given android user on landing screen login page
     When android user click to register
@@ -134,7 +134,7 @@ Feature: As user I want to create account So that i can login and see homepage
     And user click register button
     Then user get error message "email is already in user"
 
-  @fail11
+  @fail11 @broken
   Scenario: As user i failed to create account with input confirm password not same as password
     Given android user on landing screen login page
     When android user click to register
@@ -146,7 +146,7 @@ Feature: As user I want to create account So that i can login and see homepage
 #    And user click register button
     Then user get error message password not same
 
-  @fail12
+  @fail12 @broken
   Scenario: As user i failed to create account with input max char password
     Given android user on landing screen login page
     When android user click to register

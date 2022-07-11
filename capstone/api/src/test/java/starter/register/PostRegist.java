@@ -39,7 +39,7 @@ public class PostRegist {
     }
     @Step("admin see detail data")
     public void userSeeDetailData(){
-        restAssuredThat(response -> response.body("message",equalTo("User registered successfully!")));
+        restAssuredThat(response -> response.body("username",equalTo(username)));
     }
     //scenario 2
     @Step("admin send post HTTP with empty data register")

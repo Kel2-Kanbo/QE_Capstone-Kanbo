@@ -40,7 +40,7 @@ public class LoginSteps {
 
     @Then("user see status code {int} and fail to login")
     public void userSeeStatusCodeAndFailToLogin(int arg0) {
-        post.receiveResponseCode400();
+        post.receiveResponseCode(400);
     }
 
     @And("user get error message")
@@ -52,6 +52,16 @@ public class LoginSteps {
     @When("user send POST HTTP request with not register email")
     public void userSendPOSTHTTPRequestWithNotRegisterEmail() {
         post.userSendPOSTHTTPRequestWithNotRegisterEmail();
+    }
+
+    @Then("user see status code {int} after login")
+    public void userSeeStatusCodeAfterLogin(int arg0) {
+        post.receiveResponseCode401();
+    }
+
+    @And("user get error message unauthorized")
+    public void userGetErrorMessageUnauthorized() {
+        post.getErrorMessageUnauthorized();
     }
 
     //scenario 4

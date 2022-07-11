@@ -14,64 +14,94 @@ public class RegisterSteps {
     RegisterPage registerPage;
 
     //scenario 1
-    @Given("user on the register page")
+    @Given("admin on the register page")
     public void onRegisterPage(){
         registerPage.openPage();
-        registerPage.clickLoginIcon();
         registerPage.clickRegisterIcon();
     }
 
-    @When("user input valid name")
-    public void userInputValidName(){
-        registerPage.inputFullName("aseb");
+    @When("admin input valid name")
+    public void adminInputValidName(){
+        registerPage.inputName("ahmad ramadhan");
     }
 
-    @And("user input valid email")
-    public void userInputValidEmail(){
+    @And("admin input valid username")
+    public void adminInputValidUsername() {
+        registerPage.inputUsername("ahmad");
+    }
+
+    @And("admin input valid email")
+    public void adminInputValidEmail(){
         Random rand = new Random();
         int number = rand.nextInt(100000);
-        registerPage.inputEmail("User"+String.valueOf(number)+"@gmail.com");
+        registerPage.inputEmail("admin"+String.valueOf(number)+"@gmail.com");
     }
 
-    @And("user input valid password")
-    public void userInputValidPassword(){
+    @And("admin input valid password")
+    public void adminInputValidPassword(){
         registerPage.inputPassword("Password!2");
     }
 
-    @And("user click register button")
-    public void userClickRegisterButton(){
+    @And("admin click register button")
+    public void adminClickRegisterButton(){
         registerPage.clickRegisterButton();
     }
 
-    @Then("user success to create account")
-    public void userSuccessToCreateAccount(){
-        registerPage.validationSuccessRegister();
+    @Then("admin success to create account")
+    public void adminSuccessToCreateAccount(){
     }
 
     //scenario 2
-    @When("user input registered name")
-    public void userInputRegisteredName(){
-        registerPage.inputFullName("asep");
+    @When("admin not input name")
+    public void adminNotInputName() {
+        registerPage.inputUsername("");
     }
 
-    @And("user input registered email")
-    public void userInputRegisteredEmail() {
-        registerPage.inputEmail("asep@gmail.com");
+    @And("admin not input username")
+    public void adminNotInputUsername() {
+        registerPage.inputUsername("");
     }
 
-    @Then("user fail to create account and get error message {string}")
-    public void userFailToCreateAccountAndGetErrorMessage(String message) {
-        registerPage.getErrorMessage();
+    @And("admin not input email")
+    public void adminNotInputEmail() {
+        registerPage.inputEmail("");
     }
 
     //scenario 3
-    @And("user not input password")
-    public void userNotInputPassword() {
+    @And("admin input email with not use @")
+    public void adminInputEmailWithNotUse() {
+        registerPage.inputEmail("admin.gmail.com");
+    }
+
+    //scenario 4
+    @And("admin input invalid password")
+    public void adminInputInvalidPassword() {
+        registerPage.inputPassword("pass");
+    }
+
+    //scenario 6
+    @And("admin not input password")
+    public void adminNotInputPassword() {
         registerPage.inputPassword("");
     }
 
-    @Then("user fail to create account and get error message")
-    public void userFailToCreateAccountAndGetErrorMessage() {
-        registerPage.getErrorNoPassword();
+    @Then("admin fail to create account and get error message")
+    public void adminFailToCreateAccountAndGetErrorMessage() {
+    }
+
+    //scenario 7
+    @And("admin input registered email")
+    public void adminInputRegisteredEmail() {
+        registerPage.inputEmail("admin00@gmail.com");
+    }
+
+    @Then("admin fail to create account and get error message {string}")
+    public void adminFailToCreateAccountAndGetErrorMessage(String message) {
+    }
+
+    //scenario 8
+    @And("admin input registered username")
+    public void adminInputRegisteredUsername() {
+        registerPage.inputUsername("ahmad");
     }
 }
