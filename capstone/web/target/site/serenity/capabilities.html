@@ -144,7 +144,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"As user i want to create account So that i can login","type":"feature","href":"5297d59ab723d55a4e8d03bcd267eaa41d39aa7d9497936d64a811eba817a8c9.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"As admin I want to see details building on building page","type":"feature","href":"10d085187c5c4bd2431ebd4f8c9af934a0d02b7cbad46861872e50af7f41e467.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -213,7 +213,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-07-2022 09:43</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-07-2022 19:18</span>
     <br style="clear:left"/>
 </div>
 
@@ -308,19 +308,19 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr class="scenario-result FAILURE">
+                                                            <tr class="scenario-result SUCCESS">
                                                                     <td>
-                                                                            <a href="5297d59ab723d55a4e8d03bcd267eaa41d39aa7d9497936d64a811eba817a8c9.html">As user i want to create account So that i can login</a>
+                                                                            <a href="10d085187c5c4bd2431ebd4f8c9af934a0d02b7cbad46861872e50af7f41e467.html">As admin I want to see details building on building page</a>
                                                                     </td>
                                                                 <td>
-                                                                        <a href="919c1763b0d1e585e71ab81b3d31a6c0a56f5a9504d23f55a2980867befd7e51.html">As admin i have be able to success crete account</a>
+                                                                        <a href="9d7e6dadc5a14dc2e282397a8fcadd4ce5511584817d4a5ff79a5a86494d6128.html">As admin i failed to create building with empty data</a>
                                                                 </td>
-                                                                <td>7</td>
-                                                                <td>09:43:35</td>
-                                                                <td>19s 258ms</td>
+                                                                <td>14</td>
+                                                                <td>19:18:54</td>
+                                                                <td>17s 147ms</td>
                                                                 <td>
-                                                                        <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
-                                                                            style="display:none">FAILURE</span>
+                                                                        <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                            style="display:none">SUCCESS</span>
                                                                                                                                     </td>
                                                             </tr>
                                                         </tbody>
@@ -344,14 +344,14 @@
                     <div class="card">
                         <div class="card-body">
                             <div>
-                                    <a href="b5a51fc64ff8ca83de06a356b9bd0e5c8cbde54af2b1e8e384a9228fd9a93a6f.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Register&nbsp;&nbsp;&nbsp;1
+                                    <a href="49fcf388ad3d9006adb38fc3f350191c9d58a78c00371c28c78fb790921a5752.html">
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Building&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
-                                    <a href="1ef291a5dc84d9179716d0eb828dbda41bc7404c3ceb1e154d313f7dab9c2908.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Positve Regist&nbsp;&nbsp;&nbsp;1
+                                    <a href="1d0f9e345055e5013b902c1b2f1d6d6f6fd48e0e6a30241b1a0c55be613b6bd9.html">
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Negatif Build&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                             </div>
@@ -399,7 +399,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 1}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 1}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -450,7 +450,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -494,7 +494,7 @@
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 1}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 1}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -545,7 +545,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -590,7 +590,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,0,0,0,0,1,0,0],
+                    data: [1,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1

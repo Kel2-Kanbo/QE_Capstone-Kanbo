@@ -4,12 +4,13 @@ Feature: As admin I want to login So that i can see home page
   Background:
     Given i am on the login page
 
-  @positive
+  @positivelogin
   Scenario: As admin i have be able to success login
     When i input valid email
     And i input valid password
     And i click login button
     Then i success login
+    And i see homepage
 
   @negativeLogin
   Scenario: As admin i have failed to login with not input data
@@ -38,7 +39,7 @@ Feature: As admin I want to login So that i can see home page
     And i click login button
     Then i fail to login and get error message invalid email
 
-  @negativeLogin
+  @negativeLogin6
   Scenario: As admin i have failed to login with wrong password
     When i input valid email
     And i input wrong password

@@ -8,19 +8,27 @@ public class LoginPage extends PageObject {
 
     //element
     private By emailField(){
-        return By.xpath("(//input[@class='peer css-1hktf9i'])[1]");
+        return By.xpath("//input[@placeholder='Email']");
     }
 
     private By passwordField(){
-        return By.xpath("(//input[@class='peer css-1hktf9i'])[2]");
+        return By.xpath("//input[@id='1']");
     }
 
     private By loginButton(){
-        return By.xpath("//button[text()='Login']");
+        return By.xpath("//button[.='Login']");
+    }
+
+    private By showPassword(){
+        return By.xpath("//*[name()='path' and contains(@d,'M396 512a1')]");
+    }
+
+    private By suksesButton(){
+        return By.xpath("//button[text()='OK']");
     }
 
     private By onHomePage(){
-        return By.className("v-toolbar__title");
+        return By.xpath("//span[text()='logout']");
     }
 
     private By errorMessageEmail(){
@@ -32,7 +40,11 @@ public class LoginPage extends PageObject {
     }
 
     private By errorMessageNotRecord(){
-        return By.className("v-alert__content");
+        return By.xpath("//h2[contains(.,'Account not found')]");
+    }
+
+    private By dialogSuccess(){
+        return By.xpath("//div[@role='dialog']");
     }
 
     //function
@@ -63,6 +75,16 @@ public class LoginPage extends PageObject {
     }
 
     @Step
+    public boolean validationDialog(){
+        return $(dialogSuccess()).isDisplayed();
+    }
+
+    @Step
+    public void clickSuccessButton(){
+        $(suksesButton()).click();
+    }
+
+    @Step
     public boolean validationOnHomepage(){
         return $(onHomePage()).isDisplayed();
     }
@@ -80,5 +102,9 @@ public class LoginPage extends PageObject {
     @Step
     public boolean getMessageNoRecord(){
         return $(errorMessageNotRecord()).isDisplayed();
+    }
+    @Step
+    public void showPass(){
+        $(showPassword()).click();
     }
 }

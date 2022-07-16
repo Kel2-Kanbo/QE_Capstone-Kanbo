@@ -13,33 +13,71 @@ public class BuildingSteps {
     BuildingPage buildingPage;
 
     //scenario 1
-    @Given("I am on the home page")
-    public void onTheHomePage(){
-    }
-
     @When("I click building on home page")
     public void iClickBuildingOnHomePage() {
+        buildingPage.toBuildingPage();
     }
 
     @Then("I can see list building")
     public void iCanSeeListBuilding() {
+        buildingPage.onBuildingPage();
     }
 
     //scenario 2
     @When("admin click create new building")
     public void adminClickCreateNewBuilding() {
+        buildingPage.clickCreateBuilding();
     }
 
-    @And("admin fill new data building")
-    public void adminFillNewDataBuilding() {
+    @And("admin fill name building")
+    public void adminFillNameBuilding() {
+        buildingPage.fillNameBuilding("building Gudang Garam");
+    }
+
+    @And("admin choose complex")
+    public void adminChooseComplex() {
+        buildingPage.chooseExistingComplex();
+    }
+
+    @And("admin fill address building")
+    public void adminFillAddressBuilding() {
+        buildingPage.fillAddressBuilding("jln.Merdeka 5");
+    }
+
+    @And("admin fill description")
+    public void adminFillDescription() {
+        buildingPage.fillDescriptionBuilding("bangunan dengan fasilitas tercanggih");
     }
 
     @And("admin click create")
     public void adminClickCreate() {
+        buildingPage.clickAddBuilding();
     }
 
     @Then("admin success crete new building")
     public void adminSuccessCreteNewBuilding() {
+        buildingPage.clickSuccessButton();
+    }
+
+    //scenario 3
+    @And("admin choose facilities")
+    public void adminChooseFacilities() {
+        buildingPage.chooseExistingFacilitiesCategory();
+    }
+
+    @And("admin fill name facilities")
+    public void adminFillNameFacilities() {
+        buildingPage.fillNameFacilities("RSUD M.DJAMIL");
+    }
+
+    @And("admin fill duration and distance facilities")
+    public void adminFillDurationAndDistanceFacilities() {
+        buildingPage.fillDistanceFacilities("20");
+    }
+
+    @And("admin click add facilities")
+    public void adminClickAddFacilities() {
+        buildingPage.fillDurationFacilities("20");
     }
 
     //scenario 3
@@ -61,12 +99,29 @@ public class BuildingSteps {
     }
 
     //scenario 5
-    @When("admin bot fill data building")
-    public void adminBotFillDataBuilding() {
+    @And("admin not fill name building")
+    public void adminNotFillNameBuilding() {
+        buildingPage.fillNameBuilding("");
+    }
+
+    @And("admin not choose complex")
+    public void adminNotChooseComplex() {
+        buildingPage.NotchooseExistingComplex();
+    }
+
+    @And("admin not fill address building")
+    public void adminNotFillAddressBuilding() {
+        buildingPage.fillAddressBuilding("");
+    }
+
+    @And("admin not fill description")
+    public void adminNotFillDescription() {
+        buildingPage.fillDescriptionBuilding("");
     }
 
     @Then("admin fail to crete building and get message")
     public void adminFailToCreteBuildingAndGetMessage() {
+        buildingPage.getErrorEmpty();
     }
 
     //scenario 6
@@ -94,5 +149,10 @@ public class BuildingSteps {
 
     @Then("i see building by filter")
     public void iSeeBuildingByFilter() {
+    }
+
+    @And("admin click close")
+    public void adminClickClose() {
+
     }
 }

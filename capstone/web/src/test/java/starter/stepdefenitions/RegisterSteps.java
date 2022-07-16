@@ -27,7 +27,9 @@ public class RegisterSteps {
 
     @And("admin input valid username")
     public void adminInputValidUsername() {
-        registerPage.inputUsername("ahmad");
+        Random rand = new Random();
+        int number = rand.nextInt(100000);
+        registerPage.inputUsername("ahmad"+String.valueOf(number));
     }
 
     @And("admin input valid email")
@@ -39,16 +41,24 @@ public class RegisterSteps {
 
     @And("admin input valid password")
     public void adminInputValidPassword(){
-        registerPage.inputPassword("Password!2");
+        registerPage.inputPassword("password12");
+        registerPage.clickShowPass();
     }
 
     @And("admin click register button")
     public void adminClickRegisterButton(){
         registerPage.clickRegisterButton();
+        registerPage.clickSuccessRegister();
     }
 
-    @Then("admin success to create account")
-    public void adminSuccessToCreateAccount(){
+    @And("admin verify email")
+    public void adminVerifyEmail() {
+        registerPage.verifyEmailafterLogin();
+    }
+
+    @Then("admin success to create account and back to login page")
+    public void adminSuccessToCreateAccountAndBackToLoginPage() {
+        registerPage.onLoginPage();
     }
 
     //scenario 2
@@ -104,4 +114,7 @@ public class RegisterSteps {
     public void adminInputRegisteredUsername() {
         registerPage.inputUsername("ahmad");
     }
+
+
+
 }

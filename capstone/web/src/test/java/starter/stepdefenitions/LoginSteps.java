@@ -22,12 +22,13 @@ public class LoginSteps {
 
     @When("i input valid email")
     public void inputValidEmail(){
-        loginPage.inputEmail("debbb@gmail.com");
+        loginPage.inputEmail("admin002@gmail.com");
     }
 
     @And("i input valid password")
     public void inputValidPassword(){
-        loginPage.inputPassword("password!2");
+        loginPage.showPass();
+        loginPage.inputPassword("password12");
     }
 
     @And("i click login button")
@@ -37,6 +38,12 @@ public class LoginSteps {
 
     @Then("i success login")
     public void successLogin(){
+        loginPage.validationDialog();
+        loginPage.clickSuccessButton();
+
+    }
+    @And("i see homepage")
+    public void iSeeHomepage() {
         loginPage.validationOnHomepage();
     }
 
@@ -70,7 +77,7 @@ public class LoginSteps {
     //scenario 5
     @When("i input invalid email")
     public void iInputInvalidEmail() {
-        loginPage.inputEmail("debb@fsg");
+        loginPage.inputEmail("debb@tr");
     }
 
     @Then("i fail to login and get error message invalid email")
@@ -81,11 +88,12 @@ public class LoginSteps {
     //scenario 6
     @And("i input wrong password")
     public void iInputWrongPassword() {
-        loginPage.inputPassword("password12");
+        loginPage.inputPassword("password1232");
     }
 
     @Then("i failed to login and get error message on password")
     public void iFailedToLoginAndGetErrorMessageOnPassword() {
+        loginPage.getMessageNoRecord();
     }
 
     //scenario 7
@@ -104,5 +112,6 @@ public class LoginSteps {
     public void iFailedToLoginAndGetErrorMessageLessCharOnPassword() {
         loginPage.getErrorMessagePasswordLessChar();
     }
+
 
 }

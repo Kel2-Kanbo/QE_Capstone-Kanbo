@@ -9,7 +9,8 @@ Feature: As user i want to create account So that i can login
     And admin input valid email
     And admin input valid password
     And admin click register button
-    Then admin success to create account
+    And admin verify email
+    Then admin success to create account and back to login page
 
   @negative
   Scenario: As admin i have failed to create account with empty data

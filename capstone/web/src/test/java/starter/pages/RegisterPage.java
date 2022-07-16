@@ -17,19 +17,31 @@ public class RegisterPage extends PageObject {
     }
 
     private By passFiled(){
-        return By.xpath("(//input[@class='peer m-0 css-1hktf9i'])[4]");
+        return By.xpath("//input[@id='3']");
     }
 
-//    private By showPassword(){
-//        return By.name("M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z");
-//    }
+    private By showPassword(){
+        return By.xpath("//*[name()='path' and contains(@d,'M396 512a1')]");
+    }
 
     private By registerButton(){
         return By.xpath("//button[text()='Register']");
     }
 
+    private By suksesRegister(){
+        return By.xpath("//button[normalize-space()='OK']");
+    }
+
+    private By verifyEmail(){
+        return By.xpath("//button[@class='cursor-pointer text-lg font-bold text-center bg-secondary-softblue css-1kj4gdy']");
+    }
+
     private By toRegisterPage(){
         return By.xpath("//a[text()='Register']");
+    }
+
+    private By loginPage(){
+        return By.xpath("//button[@type='submit']");
     }
     private By errorMessageName(){
         return By.className("(//p[text()='Must contain at least 4 characters'])[1]");
@@ -71,19 +83,30 @@ public class RegisterPage extends PageObject {
         $(passFiled()).type(Password);
     }
 
-//    @Step
-//    public void clickShowPass(){
-//        $(showPassword()).click();
-//    }
+    @Step
+    public void clickShowPass(){
+        $(showPassword()).click();
+    }
 
     @Step
     public void clickRegisterButton(){
         $(registerButton()).click();
     }
-//    @Step
-//    public boolean validationSuccessRegister() {
-//
-//    }
+
+    @Step
+    public void clickSuccessRegister(){
+        $(suksesRegister()).click();
+    }
+
+    @Step
+    public void verifyEmailafterLogin() {
+        $(verifyEmail()).click();
+    }
+
+    @Step
+    public boolean onLoginPage(){
+        return $(loginPage()).isDisplayed();
+    }
 
     @Step
     public boolean getErrorMessageName(){
