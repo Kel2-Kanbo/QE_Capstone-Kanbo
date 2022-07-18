@@ -10,7 +10,7 @@ import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
-import static starter.manage.city.GetCity.url;
+import static starter.login.Post.url;
 
 public class GetDistrict {
 

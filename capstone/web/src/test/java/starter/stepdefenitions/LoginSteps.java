@@ -1,10 +1,12 @@
 package starter.stepdefenitions;
 
+import com.beust.ah.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import starter.pages.LoginPage;
 
 public class LoginSteps {
@@ -38,13 +40,16 @@ public class LoginSteps {
 
     @Then("i success login")
     public void successLogin(){
-        loginPage.validationDialog();
+        boolean actual = loginPage.validationDialog();
+        Assert.assertTrue(actual);
+
         loginPage.clickSuccessButton();
 
     }
     @And("i see homepage")
     public void iSeeHomepage() {
-        loginPage.validationOnHomepage();
+        boolean actual = loginPage.validationOnHomepage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 2
@@ -54,8 +59,16 @@ public class LoginSteps {
         loginPage.inputEmail("");
     }
 
-    @Then("i get error message {string}")
-    public void iGetErrorMessage(String message) {
+    @Then("admin fail to create account and get error message empty email")
+    public void adminFailToCreateAccountAndGetErrorMessageEmptyEmail() {
+        boolean actual = loginPage.getErrorMessageEmailInvalid();
+        Assert.assertTrue(actual);
+    }
+
+    @And("admin fail to create account and get error message empty password")
+    public void adminFailToCreateAccountAndGetErrorMessageEmptyPassword() {
+        boolean actual = loginPage.getErrorMessagePasswordLessChar();
+        Assert.assertTrue(actual);
     }
 
     //scenario 3
@@ -66,12 +79,20 @@ public class LoginSteps {
 
     @Then("i failed to login and get error message")
     public void iFailedToLoginAndGetErrorMessage() {
+        boolean actual = loginPage.getErrorMessageEmailInvalid();
+        Assert.assertTrue(actual);
     }
 
     //scenario 4
     @And("i not input password")
     public void iNotInputPassword() {
         loginPage.inputPassword("");
+    }
+
+    @Then("i failed to login and get error message less char on password")
+    public void iFailedToLoginAndGetErrorMessageLessCharOnPassword() {
+        boolean actual = loginPage.getErrorMessagePasswordLessChar();
+        Assert.assertTrue(actual);
     }
 
     //scenario 5
@@ -82,7 +103,8 @@ public class LoginSteps {
 
     @Then("i fail to login and get error message invalid email")
     public void iFailToLoginAndGetErrorMessageInvalidEmail() {
-        loginPage.getErrorMessageEmailInvalid();
+        boolean actual = loginPage.getInvalidEmailMessage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 6
@@ -93,7 +115,8 @@ public class LoginSteps {
 
     @Then("i failed to login and get error message on password")
     public void iFailedToLoginAndGetErrorMessageOnPassword() {
-        loginPage.getMessageNoRecord();
+        boolean actual = loginPage.getMessageNoRecord();
+        Assert.assertTrue(actual);
     }
 
     //scenario 7
@@ -108,10 +131,16 @@ public class LoginSteps {
         loginPage.inputPassword("dedeb");
     }
 
-    @Then("i failed to login and get error message less char on password")
-    public void iFailedToLoginAndGetErrorMessageLessCharOnPassword() {
-        loginPage.getErrorMessagePasswordLessChar();
+
+    //scenario 9
+    @And("i click logout button")
+    public void iClickLogoutButton() {
+        loginPage.clickLogout();
     }
 
-
+    @And("i click confirm logout")
+    public void iClickConfirmLogout() {
+        loginPage.clickConfirmLogout();
+        loginPage.clickSuccessLogout();
+    }
 }

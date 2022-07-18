@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: As a admin I want to manage city
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 14.858 s <<< FAILURE! - in As a admin I want to manage city
+As a admin I want to manage city.: As admin i want to login so that i can manage city  Time elapsed: 6.596 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: 3.80.97.57api
+
+As a admin I want to manage city.As admin i want to see all list city with valid endpoint  Time elapsed: 1.725 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+
+As a admin I want to manage city.As admin i want to create new city with valid endpoint  Time elapsed: 1.226 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+
+As a admin I want to manage city.As admin i want to create new city with invalid input data  Time elapsed: 0.941 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <401>.
+
+
+As a admin I want to manage city.As admin i want to create new city with same name  Time elapsed: 0.752 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <401>.
+
+

@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"As a admin I want to manage city","As admin i want to see all list city with valid endpoint","FAILURE","2022-07-13T22:40:35.334+07:00[Asia/Bangkok]","0.0","1.71"
+"As a admin I want to manage city","As admin i want to create new city with valid endpoint","FAILURE","2022-07-13T22:40:39.556+07:00[Asia/Bangkok]","0.0","1.21"
+"As a admin I want to manage city","As admin i want to create new city with invalid input data","FAILURE","2022-07-13T22:40:41.726+07:00[Asia/Bangkok]","0.0","0.93"
+"As a admin I want to manage city","As admin i want to create new city with same name","FAILURE","2022-07-13T22:40:42.682+07:00[Asia/Bangkok]","0.0","0.74"

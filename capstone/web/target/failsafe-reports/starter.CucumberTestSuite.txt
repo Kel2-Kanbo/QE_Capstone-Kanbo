@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: starter.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.146 s - in starter.CucumberTestSuite
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 233.503 s <<< FAILURE! - in starter.CucumberTestSuite
+As admin I want to see details building on building page.As admin i have be able to update building  Time elapsed: 27.763 s  <<< ERROR!
+net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //tbody/tr[2]/td[8]/button[1]/a[1]//*[name()='svg']//*[name()='path' and contains(@d,'M14.4767 1')] to be enabled (tried for 5 second(s) with 100 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[2]/td[8]/button[1]/a[1]//*[name()='svg']//*[name()='path' and contains(@d,'M14.4767 1')]"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [52ccc74038e8d8a9cbfda3c8a4fb0d94, findElement {using=xpath, value=//tbody/tr[2]/td[8]/button[1]/a[1]//*[name()='svg']//*[name()='path' and contains(@d,'M14.4767 1')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64866/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 52ccc74038e8d8a9cbfda3c8a4fb0d94
+

@@ -11,7 +11,8 @@ import org.json.simple.JSONObject;
 
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
-import static starter.manage.city.GetCity.url;
+import static starter.login.Post.url;
+
 
 public class PostDistrict {
 

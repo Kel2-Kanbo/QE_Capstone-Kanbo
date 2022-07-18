@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import starter.pages.RegisterPage;
 
 import java.util.Random;
@@ -48,6 +49,10 @@ public class RegisterSteps {
     @And("admin click register button")
     public void adminClickRegisterButton(){
         registerPage.clickRegisterButton();
+    }
+
+    @And("click success register")
+    public void clickSuccessRegister() {
         registerPage.clickSuccessRegister();
     }
 
@@ -77,10 +82,27 @@ public class RegisterSteps {
         registerPage.inputEmail("");
     }
 
+    @And("admin not input password")
+    public void adminNotInputPassword() {
+        registerPage.inputPassword("");
+    }
+
+    @Then("admin fail to create account and get error message name")
+    public void adminFailToCreateAccountAndGetErrorMessageName() {
+        boolean actual = registerPage.getErrorMessageName();
+        Assert.assertTrue(actual);
+    }
+
     //scenario 3
     @And("admin input email with not use @")
     public void adminInputEmailWithNotUse() {
         registerPage.inputEmail("admin.gmail.com");
+    }
+
+    @Then("admin fail to create account and get error message invalid email")
+    public void adminFailToCreateAccountAndGetErrorMessageInvalidEmail() {
+        boolean actual = registerPage.getErrorInvalidEmail();
+        Assert.assertTrue(actual);
     }
 
     //scenario 4
@@ -89,32 +111,48 @@ public class RegisterSteps {
         registerPage.inputPassword("pass");
     }
 
-    //scenario 6
-    @And("admin not input password")
-    public void adminNotInputPassword() {
-        registerPage.inputPassword("");
+    //scenario 5
+    @Then("admin fail to create account and get error message email")
+    public void adminFailToCreateAccountAndGetErrorMessageEmail() {
+        boolean actual = registerPage.getErrorMessageEmail();
+        Assert.assertTrue(actual);
     }
 
-    @Then("admin fail to create account and get error message")
-    public void adminFailToCreateAccountAndGetErrorMessage() {
+    //scenario 6
+    @Then("admin fail to create account and get error message empty username")
+    public void adminFailToCreateAccountAndGetErrorMessageEmptyUsername() {
+        boolean actual = registerPage.getErrorMessageUsername();
+        Assert.assertTrue(actual);
     }
 
     //scenario 7
-    @And("admin input registered email")
-    public void adminInputRegisteredEmail() {
-        registerPage.inputEmail("admin00@gmail.com");
-    }
-
-    @Then("admin fail to create account and get error message {string}")
-    public void adminFailToCreateAccountAndGetErrorMessage(String message) {
+    @Then("admin fail to create account and get error message password")
+    public void adminFailToCreateAccountAndGetErrorMessagePassword() {
+        boolean actual = registerPage.getErrorPassword();
+        Assert.assertTrue(actual);
     }
 
     //scenario 8
-    @And("admin input registered username")
-    public void adminInputRegisteredUsername() {
-        registerPage.inputUsername("ahmad");
+    @And("admin input registered email")
+    public void adminInputRegisteredEmail() {
+        registerPage.inputEmail("admin002@gmail.com");
     }
 
+    @Then("admin fail to create account and get error message email is ready")
+    public void adminFailToCreateAccountAndGetErrorMessageEmailIsReady() {
+        boolean actual = registerPage.getErrorRegisteredEmail();
+        Assert.assertTrue(actual);
+    }
 
+    //scenario 9
+    @And("admin input registered username")
+    public void adminInputRegisteredUsername() {
+        registerPage.inputUsername("admin002");
+    }
 
+    @Then("admin fail to create account and get error message username is ready")
+    public void adminFailToCreateAccountAndGetErrorMessageUsernameIsReady() {
+        boolean actual = registerPage.getRegisteredUsername();
+        Assert.assertTrue(actual);
+    }
 }

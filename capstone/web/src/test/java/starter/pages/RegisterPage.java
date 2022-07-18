@@ -6,18 +6,18 @@ import org.openqa.selenium.By;
 
 public class RegisterPage extends PageObject {
     private By nameField(){
-        return By.xpath("(//input[@class='peer m-0 css-1hktf9i'])[1]");
+        return By.xpath("//input[@placeholder='Name']");
     }
 
     private By usernameField(){
-        return By.xpath("(//input[@class='peer m-0 css-1hktf9i'])[2]");
+        return By.xpath("//input[@name='username']");
     }
     private By emailField(){
-        return By.xpath("(//input[@class='peer m-0 css-1hktf9i'])[3]");
+        return By.xpath("//input[@placeholder='Email']");
     }
 
     private By passFiled(){
-        return By.xpath("//input[@id='3']");
+        return By.xpath("//input[@name='password']");
     }
 
     private By showPassword(){
@@ -41,20 +41,40 @@ public class RegisterPage extends PageObject {
     }
 
     private By loginPage(){
-        return By.xpath("//button[@type='submit']");
+        return By.xpath("//button[.='Login']");
     }
+
     private By errorMessageName(){
-        return By.className("(//p[text()='Must contain at least 4 characters'])[1]");
+        return By.xpath("(//p[text()='Must contain at least 4 characters'])[1]");
     }
+
     private By errorMessageUsername(){
-        return By.className("(//p[text()='Must contain at least 4 characters'])[2]");
+        return By.xpath("(//p[text()='Must contain at least 4 characters'])[2]");
     }
+
     private By errorMessageEmail(){
-        return By.className("//p[text()='Email must be valid']");
+        return By.xpath("//p[text()='Email must be valid']");
     }
+
     private By errorMessagePassword(){
-        return By.className("//p[text()='Must contain at least 6 or more characters']");
+        return By.xpath("//p[text()='Must contain at least 6 or more characters']");
     }
+
+    private By registeredUsername(){
+        return By.xpath("//div[@role='dialog']");
+    }
+
+    private By registeredEmail(){
+        return By.xpath("//div[.='Error: Email is Already in User !']");
+    }
+
+    private By invalidEmail(){
+        return By.xpath("//h2[.='Register Failed']");
+    }
+
+
+
+    //function
     @Step
     public void openPage(){
         open();
@@ -124,7 +144,22 @@ public class RegisterPage extends PageObject {
     }
 
     @Step
+    public boolean getErrorInvalidEmail(){
+        return $(invalidEmail()).isDisplayed();
+    }
+
+    @Step
     public boolean getErrorPassword(){
         return $(errorMessagePassword()).isDisplayed();
+    }
+
+    @Step
+    public boolean getErrorRegisteredEmail(){
+        return $(registeredEmail()).isDisplayed();
+    }
+
+    @Step
+    public boolean getRegisteredUsername(){
+        return $(registeredUsername()).isDisplayed();
     }
 }

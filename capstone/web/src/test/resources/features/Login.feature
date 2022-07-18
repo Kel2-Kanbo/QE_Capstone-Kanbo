@@ -1,4 +1,4 @@
-@login
+@login @feature
 Feature: As admin I want to login So that i can see home page
 
   Background:
@@ -16,7 +16,8 @@ Feature: As admin I want to login So that i can see home page
   Scenario: As admin i have failed to login with not input data
     When i not input username and password
     And i click login button
-    Then i get error message "email is required"
+    Then admin fail to create account and get error message empty email
+    And admin fail to create account and get error message empty password
 
   @negativeLogin
   Scenario: As admin i have failed to login with no input email
@@ -58,8 +59,17 @@ Feature: As admin I want to login So that i can see home page
     When i input valid email
     And i input invalid password
     And i click login button
-    Then i failed to login and get error message less char on password
+    Then i failed to login and get error message on password
 
+  Scenario: As admin i logout my account
+    Given i am on the login page
+    When i input valid email
+    And i input valid password
+    And i click login button
+    And i success login
+    And i click logout button
+    And i click confirm logout
+    Then i am on the login page
 
 
 

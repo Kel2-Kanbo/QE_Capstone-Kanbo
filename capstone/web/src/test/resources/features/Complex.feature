@@ -1,4 +1,4 @@
-@complex
+@complex @feature
 Feature: As a admin I want to see existing complex on complex page
 
   Background:
@@ -24,6 +24,7 @@ Feature: As a admin I want to see existing complex on complex page
     And admin choose city
     And admin choose district
     And admin click create complex
+    And admin click success complex
     Then admin success create new complex
 
   Scenario: As admin i failed to create new complex with not fill complex name
@@ -45,7 +46,8 @@ Feature: As a admin I want to see existing complex on complex page
     And admin choose province
     And admin not choose city and district
     And admin click create complex
-    Then admin failed to create complex with not choose city district
+    Then admin failed to create complex with not choose city
+    And admin failed to create complex with not choose distrit
 
   Scenario: As admin i failed to create complex with not choose province
     Given admin on the home page
@@ -65,13 +67,13 @@ Feature: As a admin I want to see existing complex on complex page
     And admin click create complex
     Then admin failed create complex with empty data
 
-#  Scenario: As admin i failed to create complex with click cancel after fill data
-#    Given admin on the home page
-#    When admin click complex
-#    And admin click create new complex
-#    And admin fill new data complex
-#    And admin click cancel after fill data complex
-#    Then admin failed to create complex with click cancel
+  Scenario: As admin i failed to create complex with click cancel after fill data
+    Given admin on the home page
+    When admin click complex
+    And admin click create new complex
+    And admin fill new data complex
+    And admin click cancel after fill data complex
+    Then admin failed to create complex with click cancel
 
   @positiveComplex4
   Scenario: As admin i success to delete existing complex
@@ -80,23 +82,11 @@ Feature: As a admin I want to see existing complex on complex page
     And i click delete existing complex
     And i click confirm delete
     Then i success delete complex
-#
-#  Scenario: As admin i search complex name
+
+#  @positiveComplex3
+#  Scenario: As admin i update existing complex
 #    Given admin on the home page
 #    When admin click complex
-#    And i fill search box with valid keyword complex
-#    Then i get complex with this name
-#
-#  Scenario: As admin i filter complex
-#    Given admin on the home page
-#    When admin click complex
-#    And i choose filter on complex page
-#    Then i see list complex by filter
-#
-  @positiveComplex3
-  Scenario: As admin i update existing complex
-    Given admin on the home page
-    When admin click complex
-    And admin click edit button on complex
-    And admin edit data complex
-    Then admin success edit complex
+#    And admin click edit button on complex
+#    And admin edit data complex
+#    Then admin success edit complex

@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import starter.pages.ComplexPage;
 
 public class ComplexSteps {
@@ -59,9 +60,15 @@ public class ComplexSteps {
         complexPage.clickAddComplex();
     }
 
+    @And("admin click success complex")
+    public void clickSuccessComplex() {
+        complexPage.clickSuccessButton();
+    }
+
     @Then("admin success create new complex")
     public void adminSuccessCreateNewComplex() {
-        complexPage.clickSuccessButton();
+        boolean actual = complexPage.validationOnComplexPage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 3
@@ -88,10 +95,16 @@ public class ComplexSteps {
         complexPage.NotChooseExistingDistrict();
     }
 
-    @Then("admin failed to create complex with not choose city district")
-    public void adminFailedToCreateComplexWithNotChooseCityDistrict() {
-        complexPage.getErrorNoCity();
-        complexPage.getErrorNoDistrict();
+    @Then("admin failed to create complex with not choose city")
+    public void adminFailedToCreateComplexWithNotChooseCity() {
+        boolean actual =  complexPage.getErrorNoCity();
+        Assert.assertTrue(actual);
+    }
+
+    @And("admin failed to create complex with not choose distrit")
+    public void adminFailedToCreateComplexWithNotChooseDistrit() {
+        boolean actual = complexPage.getErrorNoDistrict();
+        Assert.assertTrue(actual);
     }
 
     //scenario 5
@@ -102,7 +115,8 @@ public class ComplexSteps {
 
     @Then("admin failed to create complex with not choose province")
     public void adminFailedToCreateComplexWithNotChooseProvince() {
-        complexPage.getErrorNoProvince();
+        boolean actual = complexPage.getErrorNoProvince();
+        Assert.assertTrue(actual);
     }
 
     //scenario 6
@@ -121,16 +135,20 @@ public class ComplexSteps {
 
     @Then("admin failed create complex with empty data")
     public void adminFailedCreateComplexWithEmptyData() {
-        complexPage.getErrorEmptyData();
+        boolean actual = complexPage.getErrorEmptyData();
+        Assert.assertTrue(actual);
     }
 
     //scenario 7
     @And("admin click cancel after fill data complex")
     public void adminClickCancelAfterFillDataComplex() {
+        complexPage.clickCancelOnComplex();
     }
 
     @Then("admin failed to create complex with click cancel")
     public void adminFailedToCreateComplexWithClickCancel() {
+        boolean actual = complexPage.validationOnComplexPage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 8
@@ -149,24 +167,6 @@ public class ComplexSteps {
     }
 
     //scenario 9
-    @When("i fill search box with valid keyword complex")
-    public void iFillSearchBoxWithValidKeywordComplex() {
-    }
-
-    @Then("i get complex with this name")
-    public void iGetComplexWithThisName() {
-    }
-
-    //scenario 10
-    @When("i choose filter on complex page")
-    public void iChooseFilterOnComplexPage() {
-    }
-
-    @Then("i see list complex by filter")
-    public void iSeeListComplexByFilter() {
-    }
-
-    //scenario 11
     @And("admin click edit button on complex")
     public void adminClickEditButtonOnComplex() {
         complexPage.clickEditButton();
@@ -179,6 +179,4 @@ public class ComplexSteps {
     @Then("admin success edit complex")
     public void adminSuccessEditComplex() {
     }
-
-
 }

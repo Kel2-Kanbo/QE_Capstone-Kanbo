@@ -1,4 +1,4 @@
-@building
+@building @feature
 Feature: As admin I want to see details building on building page
 
   Background:
@@ -24,9 +24,10 @@ Feature: As admin I want to see details building on building page
     And admin fill address building
     And admin fill description
     And admin click create
+    And admin click success add
     Then admin success crete new building
 
-  @positifBuild
+  @positifBuild3
   Scenario: As admin i have be able success to create new building with fill facilities
     Given admin on the home page
     When I click building on home page
@@ -40,15 +41,19 @@ Feature: As admin I want to see details building on building page
     And admin fill duration and distance facilities
     And admin click add facilities
     And admin click create
+    And admin click success add
     Then admin success crete new building
 
-  Scenario: As admin i have failed to create building with same name
+  Scenario: As admin i have failed to create building with no choose complex
     Given admin on the home page
     When I click building on home page
     And admin click create new building
-    And admin fill same data building
+    And admin fill name building
+    And admin not choose complex
+    And admin fill address building
+    And admin fill description
     And admin click create
-    Then admin fail to create new building
+    Then admin fail to crete building and get message
 
   Scenario: As admin i create new building but i click cancel
     Given admin on the home page
@@ -59,7 +64,7 @@ Feature: As admin I want to see details building on building page
     And admin fill address building
     And admin fill description
     And admin click close
-    Then admin success crete new building
+    Then admin fail add building and back to building page
 
     @negatifBuild
   Scenario: As admin i failed to create building with empty data
@@ -79,14 +84,10 @@ Feature: As admin I want to see details building on building page
     And i click delete on existing building
     Then i success delete building
 
-  Scenario: As admin i search building name
+  Scenario: As admin i have be able to update building
     Given admin on the home page
-    When I click building on home page
-    And i fill search box with valid keyword
-    Then i get building with this name
-
-  Scenario: As admin i filter building
-    Given admin on the home page
-    When I click building on home page
-    And i choose filter on building page
-    Then i see building by filter
+    And admin click update button building
+    And admin edit or update data building
+    And admin click update building
+    And admin click success update building
+    Then admin success update building

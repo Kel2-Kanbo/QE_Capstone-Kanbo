@@ -54,7 +54,11 @@ public class ComplexPage extends PageObject {
     }
 
     private By deleteButton(){
-        return By.xpath("//tbody/tr[8]/td[8]/button[2]//*[name()='svg']//*[name()='path' and contains(@fill-rule,'evenodd')]");
+        return By.xpath("(//*[name()='path'][@fill-rule='evenodd'])[7]");
+    }
+
+    private By clickCancel(){
+        return By.xpath("//button[normalize-space()='Close']");
     }
 
     private By confirmDelete(){
@@ -172,6 +176,11 @@ public class ComplexPage extends PageObject {
     @Step
     public void clickConfirmDelete(){
         $(confirmDelete()).click();
+    }
+
+    @Step
+    public void clickCancelOnComplex(){
+        $(clickCancel()).click();
     }
 
     @Step

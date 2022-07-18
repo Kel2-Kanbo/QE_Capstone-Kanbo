@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="4" name="As a admin I want to manage city" skipped="0" tests="7" time="14.27" timestamp="2022-07-13 10:40:29"><testcase name=": As admin i want to login so that i can manage city"><error message="3.80.97.57api" type="java.net.UnknownHostException">3.80.97.57api</error><system-err>3.80.97.57api&#13;
+org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#13;
+org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#13;
+org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#13;
+org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)&#13;
+org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#13;
+org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#13;
+org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#13;
+org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#13;
+org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)&#13;
+io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)&#13;
+io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:818)&#13;
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)&#13;
+net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java:40)&#13;
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)&#13;
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:818)&#13;
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:818)&#13;
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)&#13;
+io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:175)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.executeCall(RequestSpecificationDecorated.java:309)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.execute(RequestSpecificationDecorated.java:268)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java:120)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java:38)&#13;
+starter.login.Post.SendPOSTHTTPRequestWithValidDataAdmin(Post.java:174)&#13;
+starter.stepdefenitions.LoginSteps.adminSendPOSTHTTPRequestWithValidData(LoginSteps.java:126)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:64)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:104)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:73)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)&#13;
+</system-err></testcase><testcase name="As admin i want to see all list city with valid endpoint"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)&#13;
+starter.manage.city.PostCity.lambda$getStatusCodeOnCity$3(PostCity.java:87)&#13;
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)&#13;
+starter.manage.city.PostCity.getStatusCodeOnCity(PostCity.java:87)&#13;
+starter.stepdefenitions.CitySteps.adminGetStatusCodeOnCity(CitySteps.java:96)&#13;
+✽.admin get status code 200 on city(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/api/src/test/resources/api/City.feature:13)&#13;
+</system-err></testcase><testcase name="As admin i want to see all list city with invalid endpoint"/><testcase name="As admin i want to create new city with valid endpoint"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)&#13;
+starter.manage.city.PostCity.lambda$getStatusCodeOnCity$3(PostCity.java:87)&#13;
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)&#13;
+starter.manage.city.PostCity.getStatusCodeOnCity(PostCity.java:87)&#13;
+starter.stepdefenitions.CitySteps.adminGetStatusCodeOnCity(CitySteps.java:96)&#13;
+✽.admin get status code 200 on city(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/api/src/test/resources/api/City.feature:25)&#13;
+</system-err></testcase><testcase name="As admin i want to create new city with invalid endpoint"/><testcase name="As admin i want to create new city with invalid input data"><failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;401&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;401&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)&#13;
+starter.manage.city.PostCity.lambda$getStatusCodeOnCity$3(PostCity.java:87)&#13;
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)&#13;
+starter.manage.city.PostCity.getStatusCodeOnCity(PostCity.java:87)&#13;
+starter.stepdefenitions.CitySteps.adminGetStatusCodeOnCity(CitySteps.java:96)&#13;
+✽.admin get status code 400 on city(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/api/src/test/resources/api/City.feature:37)&#13;
+</system-err></testcase><testcase name="As admin i want to create new city with same name"><failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;401&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;401&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)&#13;
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)&#13;
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1267)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)&#13;
+io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)&#13;
+starter.manage.city.PostCity.lambda$getStatusCodeOnCity$3(PostCity.java:87)&#13;
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)&#13;
+starter.manage.city.PostCity.getStatusCodeOnCity(PostCity.java:87)&#13;
+starter.stepdefenitions.CitySteps.adminGetStatusCodeOnCity(CitySteps.java:96)&#13;
+✽.admin get status code 400 on city(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/api/src/test/resources/api/City.feature:43)&#13;
+</system-err></testcase></testsuite>

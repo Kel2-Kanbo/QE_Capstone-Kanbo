@@ -1,4 +1,4 @@
-@register
+@register @feature
 Feature: As user i want to create account So that i can login
 
   @positveRegist
@@ -9,6 +9,7 @@ Feature: As user i want to create account So that i can login
     And admin input valid email
     And admin input valid password
     And admin click register button
+    And click success register
     And admin verify email
     Then admin success to create account and back to login page
 
@@ -20,9 +21,12 @@ Feature: As user i want to create account So that i can login
     And admin not input email
     And admin not input password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message name
+    And admin fail to create account and get error message email
+    And admin fail to create account and get error message empty username
+    And admin fail to create account and get error message password
 
-  @negative
+  @negativeRegist1
   Scenario: As admin i have failed to create account with not use @ on email
     Given admin on the register page
     When admin input valid name
@@ -30,7 +34,7 @@ Feature: As user i want to create account So that i can login
     And admin input email with not use @
     And admin input valid password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message invalid email
 
   @negative
   Scenario: As admin i have failed to create account with input password less character
@@ -39,7 +43,7 @@ Feature: As user i want to create account So that i can login
     And admin input valid email
     And admin input invalid password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message password
 
   @negative
   Scenario: As admin i have failed to create account with empty email
@@ -48,17 +52,17 @@ Feature: As user i want to create account So that i can login
     And admin not input email
     And admin input valid password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message email
 
-  @negative
+  @negative2regist
   Scenario: As admin i have failed to create account with empty username
     Given admin on the register page
     And admin input valid name
     And admin not input username
     And admin input valid email
-    And i input valid password
+    And admin input valid password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message empty username
 
   @negative2
   Scenario: As admin i have failed to create account with empty password
@@ -68,7 +72,7 @@ Feature: As user i want to create account So that i can login
     And admin input valid email
     And admin not input password
     And admin click register button
-    Then admin fail to create account and get error message
+    Then admin fail to create account and get error message password
 
   @negative
   Scenario: As admin i have failed to create account with registered email
@@ -78,7 +82,7 @@ Feature: As user i want to create account So that i can login
     And admin input registered email
     And admin input valid password
     And admin click register button
-    Then admin fail to create account and get error message "ERROR: duplicate key"
+    Then admin fail to create account and get error message email is ready
 
   @negative
   Scenario: As admin i have failed to create account with registered username
@@ -88,5 +92,5 @@ Feature: As user i want to create account So that i can login
     And admin input valid email
     And admin input valid password
     And admin click register button
-    Then admin fail to create account and get error message "ERROR: duplicate key"
+    Then admin fail to create account and get error message username is ready
 

@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"As a user I want to login in the app So that i can see homepage","As user i have failed to login with wrong password","ERROR","2022-07-04T08:31:09.514+07:00[Asia/Bangkok]","0.0","30.91"
-"As a user I want to login in the app So that i can see homepage","As user i have failed to login with invalid password(less than minimum char)","ERROR","2022-07-04T08:31:40.443+07:00[Asia/Bangkok]","0.0","39.04"

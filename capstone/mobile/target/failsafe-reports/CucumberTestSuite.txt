@@ -1,100 +1,52 @@
 -------------------------------------------------------------------------------
 Test set: CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 41, Failures: 0, Errors: 8, Skipped: 6, Time elapsed: 232.075 sec <<< FAILURE! - in CucumberTestSuite
-android user click profile(As a user i have be able to success login)  Time elapsed: 17.194 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+Tests run: 45, Failures: 0, Errors: 4, Skipped: 5, Time elapsed: 225.273 sec <<< FAILURE! - in CucumberTestSuite
+user on the home page(As user i see detail room)  Time elapsed: 30.399 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Search"] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+Session ID: 28ec38bd-d022-44d8-9f33-aaec45fc0379
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Search"]}
 
-As a user i have be able to success login  Time elapsed: 0.007 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+As user i see detail room  Time elapsed: 0.001 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Search"] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+Session ID: 28ec38bd-d022-44d8-9f33-aaec45fc0379
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Search"]}
 
-android user see error message not registered email(As user i have failed to login with not registered email)  Time elapsed: 15.086 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
+user click booking room(As user i success booking room)  Time elapsed: 15.116 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 5f59598c-a7ba-4dae-b2e9-5a4fa760e17a
-*** Element info: {Using=accessibility id, value=Email atau password tidak sesuai}
+Session ID: 97c07077-0959-478b-bcaa-fc72d25112fa
+*** Element info: {Using=xpath, value=(//android.widget.Button)[2]}
 
-As user i have failed to login with not registered email  Time elapsed: 15.164 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
+As user i success booking room  Time elapsed: 0.002 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 5f59598c-a7ba-4dae-b2e9-5a4fa760e17a
-*** Element info: {Using=accessibility id, value=Email atau password tidak sesuai}
-
-android user on landing screen(As user i have failed to login with wrong password)  Time elapsed: 30.703 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Login to continue!"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: b7a73c6e-0faf-4456-939e-120ef2c838af
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Login to continue!"]}
-
-As user i have failed to login with wrong password  Time elapsed: 0.096 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Login to continue!"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: b7a73c6e-0faf-4456-939e-120ef2c838af
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Login to continue!"]}
-
-android user see error message invalid password(As user i have failed to login with invalid password(less than minimum char))  Time elapsed: 15.161 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Email atau password tidak sesuai"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: a5175261-b306-4ee2-a555-e0a20c8d73f3
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Email atau password tidak sesuai"]}
-
-As user i have failed to login with invalid password(less than minimum char)  Time elapsed: 15.341 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Email atau password tidak sesuai"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: a5175261-b306-4ee2-a555-e0a20c8d73f3
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Email atau password tidak sesuai"]}
+Session ID: 97c07077-0959-478b-bcaa-fc72d25112fa
+*** Element info: {Using=xpath, value=(//android.widget.Button)[2]}
 

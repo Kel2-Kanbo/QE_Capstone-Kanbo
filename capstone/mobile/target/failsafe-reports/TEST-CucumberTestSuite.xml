@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CucumberTestSuite" time="232.075" tests="41" errors="8" skipped="6" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CucumberTestSuite" time="225.273" tests="45" errors="4" skipped="5" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\bin"/>
@@ -36,7 +36,7 @@
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\OPT\apache-maven-3.8.5\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\Admin"/>
-    <property name="tags" value="@login"/>
+    <property name="tags" value=" @ready"/>
     <property name="user.timezone" value="Asia/Bangkok"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_321\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dtags=@login"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dtags= @ready"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,33 +65,76 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="android user on landing screen" classname="As a user i have be able to success login" time="22.276"/>
-  <testcase name="android user input valid email" classname="As a user i have be able to success login" time="1.012"/>
-  <testcase name="android user input valid password" classname="As a user i have be able to success login" time="1.418"/>
-  <testcase name="android user click login button" classname="As a user i have be able to success login" time="0.667"/>
-  <testcase name="android user click profile" classname="As a user i have be able to success login" time="17.194">
-    <error message="Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc=&quot;Profile Tab 4 of 4&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+  <testcase name="user on the home page" classname=": As user i see existing building" time="20.816"/>
+  <testcase name="user click existing building on the home page" classname=": As user i see existing building" time="0.311"/>
+  <testcase name="user see detail building" classname=": As user i see existing building" time="2.122"/>
+  <testcase name="user see list room on building" classname=": As user i see existing building" time="0.121"/>
+  <testcase name=": As user i see existing building" classname=": As user i see existing building" time="0.142"/>
+  <testcase name="user on the home page" classname="As user i see nearby facilities on building page" time="18.97"/>
+  <testcase name="user click existing building on the home page" classname="As user i see nearby facilities on building page" time="0.171"/>
+  <testcase name="user on the building page" classname="As user i see nearby facilities on building page" time="2.133"/>
+  <testcase name="user click nearby facilities" classname="As user i see nearby facilities on building page" time="0.199"/>
+  <testcase name="user see pop up menu about nearby facilities" classname="As user i see nearby facilities on building page" time="0.776"/>
+  <testcase name="As user i see nearby facilities on building page" classname="As user i see nearby facilities on building page" time="0.787"/>
+  <testcase name="user click chat tab" classname="As user i click existing chat from admin building" time="19.646"/>
+  <testcase name="user on the chat page" classname="As user i click existing chat from admin building" time="0.103"/>
+  <testcase name="user click message" classname="As user i click existing chat from admin building" time="0.286"/>
+  <testcase name="user see detail chat" classname="As user i click existing chat from admin building" time="0.829"/>
+  <testcase name="As user i click existing chat from admin building" classname="As user i click existing chat from admin building" time="0.85"/>
+  <testcase name="user on the chat page" classname="As user i search chat with admin" time="18.908"/>
+  <testcase name="user click search box and input name building" classname="As user i search chat with admin" time="0.002"/>
+  <testcase name="user see message from admin building" classname="As user i search chat with admin" time="0.002"/>
+  <testcase name="As user i search chat with admin" classname="As user i search chat with admin" time="0.012"/>
+  <testcase name="user click chat tab" classname="As user i send message" time="19.621"/>
+  <testcase name="user on the chat page" classname="As user i send message" time="0.104"/>
+  <testcase name="user click message" classname="As user i send message" time="0.316"/>
+  <testcase name="user input text on message field" classname="As user i send message" time="1.876"/>
+  <testcase name="user click send button" classname="As user i send message" time="0.763"/>
+  <testcase name="user success send message" classname="As user i send message" time="0.984"/>
+  <testcase name="As user i send message" classname="As user i send message" time="0.992"/>
+  <testcase name="user on the chat page" classname="As user i send message with not input text" time="19.266"/>
+  <testcase name="user click message" classname="As user i send message with not input text" time="0.187"/>
+  <testcase name="user not input text on message field" classname="As user i send message with not input text" time="0.002"/>
+  <testcase name="user click send button" classname="As user i send message with not input text" time="0.23"/>
+  <testcase name="user fail send message" classname="As user i send message with not input text" time="0.003"/>
+  <testcase name="As user i send message with not input text" classname="As user i send message with not input text" time="0.011"/>
+  <testcase name="user on the home page" classname="As user i see detail room" time="30.399">
+    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Search&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Search"] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+Session ID: 28ec38bd-d022-44d8-9f33-aaec45fc0379
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Search"]}
 </error>
-    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mandroid user click login button&amp#27;[0m               &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.clickLoginButton()&amp#27;[0m
+    <system-out><![CDATA[
+@room @ready
+Scenario: As user i see detail room                  &amp#27;[90m# src/test/resources/features/Room.feature:11&amp#27;[0m
 ]]></system-out>
+    <system-err><![CDATA[[main] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Room.feature
+[main] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+As user i see detail room(as-user-i-want-to-see-existing-room-so-that-i-can-booking-room;as-user-i-see-detail-room)
+--------------------------------------------------------------------------------
+Jul 18, 2022 3:23:25 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
   </testcase>
-  <testcase name="android user click logout" classname="As a user i have be able to success login" time="0">
+  <testcase name="user click existing building on the home page" classname="As user i see detail room" time="0">
     <skipped/>
-    <system-out><![CDATA[  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mandroid user click profile&amp#27;[0m                    &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserClickProfile()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+    <system-out><![CDATA[  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31muser on the home page&amp#27;[0m                        &amp#27;[90m# test.mobile.stepdefenitions.BuildingSteps.onTheHomePage()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Search"] (tried for 15 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at test.mobile.pageobject.BasePageObject.waitUntilClickable(BasePageObject.java:35)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilClickable$accessor$xNUKoWtQ(Unknown Source)
+	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:40)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.waitUntilVisible$accessor$fJ6SFRX4(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,22 +145,9 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilClickable(Unknown Source)
-	at test.mobile.pageobject.BasePageObject.onClick(BasePageObject.java:47)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onClick$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onClick(Unknown Source)
-	at test.mobile.pages.LoginPage.clickProfileTab(LoginPage.java:92)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.clickProfileTab$accessor$xNUKoWtQ(Unknown Source)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.waitUntilVisible(Unknown Source)
+	at test.mobile.pages.BuildingPage.onTheHomePage(BuildingPage.java:52)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.onTheHomePage$accessor$fJ6SFRX4(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,17 +159,224 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.clickProfileTab(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserClickProfile(LoginSteps.java:45)
-	at âœ½.android user click profile(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Login.feature:11)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.onTheHomePage(Unknown Source)
+	at test.mobile.stepdefenitions.BuildingSteps.onTheHomePage(BuildingSteps.java:19)
+	at âœ½.user on the home page(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Room.feature:12)
 Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+Session ID: 28ec38bd-d022-44d8-9f33-aaec45fc0379
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Search"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:40)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.waitUntilVisible$accessor$fJ6SFRX4(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.waitUntilVisible(Unknown Source)
+	at test.mobile.pages.BuildingPage.onTheHomePage(BuildingPage.java:52)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.onTheHomePage$accessor$fJ6SFRX4(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at test.mobile.pages.BuildingPage$ByteBuddy$WGK1isnp.onTheHomePage(Unknown Source)
+	at test.mobile.stepdefenitions.BuildingSteps.onTheHomePage(BuildingSteps.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:110)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)
+	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:286)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="user on the building page" classname="As user i see detail room" time="0">
+    <skipped/>
+    <system-out><![CDATA[  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36muser click existing building on the home page&amp#27;[0m &amp#27;[90m# test.mobile.stepdefenitions.BuildingSteps.userClickExistingBuildingOnTheHomePage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="user click existing room" classname="As user i see detail room" time="0">
+    <skipped/>
+    <system-out><![CDATA[  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36muser on the building page&amp#27;[0m                      &amp#27;[90m# test.mobile.stepdefenitions.BuildingSteps.userOnTheBuildingPage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="user see detail about room" classname="As user i see detail room" time="0">
+    <skipped/>
+    <system-out><![CDATA[  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36muser click existing room&amp#27;[0m                       &amp#27;[90m# test.mobile.stepdefenitions.RoomSteps.userClickExistingRoom()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="As user i see detail room" classname="As user i see detail room" time="0.001">
+    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Search&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Search"] (tried for 15 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
+Session ID: 28ec38bd-d022-44d8-9f33-aaec45fc0379
+*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Search"]}
+</error>
+    <system-out><![CDATA[  &amp#27;[36mThen &amp#27;[0m&amp#27;[36muser see detail about room&amp#27;[0m                    &amp#27;[90m# test.mobile.stepdefenitions.RoomSteps.userSeeDetailAboutRoom()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="user on the home page" classname="As user i success booking room" time="19.525"/>
+  <testcase name="user click existing building on the home page" classname="As user i success booking room" time="0.308"/>
+  <testcase name="user click existing room" classname="As user i success booking room" time="19.859"/>
+  <testcase name="user click booking room" classname="As user i success booking room" time="15.116">
+    <error message="Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
+Session ID: 97c07077-0959-478b-bcaa-fc72d25112fa
+*** Element info: {Using=xpath, value=(//android.widget.Button)[2]}
+</error>
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser click existing room&amp#27;[0m                       &amp#27;[90m# test.mobile.stepdefenitions.RoomSteps.userClickExistingRoom()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="user just completes the data" classname="As user i success booking room" time="0">
+    <skipped/>
+    <system-out><![CDATA[  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31muser click booking room&amp#27;[0m                        &amp#27;[90m# test.mobile.stepdefenitions.RoomSteps.userClickBookingRoom()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at test.mobile.pageobject.BasePageObject.waitUntilClickable(BasePageObject.java:32)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.waitUntilClickable$accessor$Bh2CC97Y(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.waitUntilClickable(Unknown Source)
+	at test.mobile.pageobject.BasePageObject.onClick(BasePageObject.java:44)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.onClick$accessor$Bh2CC97Y(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.onClick(Unknown Source)
+	at test.mobile.pages.RoomPage.clickBookingButton(RoomPage.java:59)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.clickBookingButton$accessor$Bh2CC97Y(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.clickBookingButton(Unknown Source)
+	at test.mobile.stepdefenitions.RoomSteps.userClickBookingRoom(RoomSteps.java:35)
+	at âœ½.user click booking room(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Room.feature:22)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
+Session ID: 97c07077-0959-478b-bcaa-fc72d25112fa
+*** Element info: {Using=xpath, value=(//android.widget.Button)[2]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -171,8 +408,8 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at test.mobile.pageobject.BasePageObject.waitUntilClickable(BasePageObject.java:35)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilClickable$accessor$xNUKoWtQ(Unknown Source)
+	at test.mobile.pageobject.BasePageObject.waitUntilClickable(BasePageObject.java:32)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.waitUntilClickable$accessor$Bh2CC97Y(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -183,9 +420,9 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilClickable(Unknown Source)
-	at test.mobile.pageobject.BasePageObject.onClick(BasePageObject.java:47)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onClick$accessor$xNUKoWtQ(Unknown Source)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.waitUntilClickable(Unknown Source)
+	at test.mobile.pageobject.BasePageObject.onClick(BasePageObject.java:44)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.onClick$accessor$Bh2CC97Y(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -196,9 +433,9 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onClick(Unknown Source)
-	at test.mobile.pages.LoginPage.clickProfileTab(LoginPage.java:92)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.clickProfileTab$accessor$xNUKoWtQ(Unknown Source)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.onClick(Unknown Source)
+	at test.mobile.pages.RoomPage.clickBookingButton(RoomPage.java:59)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.clickBookingButton$accessor$Bh2CC97Y(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -210,8 +447,8 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.clickProfileTab(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserClickProfile(LoginSteps.java:45)
+	at test.mobile.pages.RoomPage$ByteBuddy$elxHbo0J.clickBookingButton(Unknown Source)
+	at test.mobile.stepdefenitions.RoomSteps.userClickBookingRoom(RoomSteps.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -258,595 +495,19 @@ Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
 &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="android user on login page" classname="As a user i have be able to success login" time="0">
-    <skipped/>
-    <system-out><![CDATA[  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mandroid user click logout&amp#27;[0m                     &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserClickLogout()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="As a user i have be able to success login" classname="As a user i have be able to success login" time="0.007">
-    <error message="Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc=&quot;Profile Tab 4 of 4&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.View[@content-desc="Profile Tab 4 of 4"] (tried for 15 second(s) with 500 milliseconds interval)
+  <testcase name="As user i success booking room" classname="As user i success booking room" time="0.002">
+    <error message="Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//android.widget.Button)[2] (tried for 15 second(s) with 500 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+System info: host: 'DESKTOP-EQ55Q8H', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 445e97a9-bd76-41c5-a84f-db3c5f6a1157
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Profile Tab 4 of 4"]}
+Session ID: 97c07077-0959-478b-bcaa-fc72d25112fa
+*** Element info: {Using=xpath, value=(//android.widget.Button)[2]}
 </error>
-    <system-out><![CDATA[  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mandroid user on login page&amp#27;[0m                   &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserOnLoginPage()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user on landing screen" classname="As user i have failed to login with empty data" time="19.229"/>
-  <testcase name="android user not input email" classname="As user i have failed to login with empty data" time="1.037"/>
-  <testcase name="android user not input password" classname="As user i have failed to login with empty data" time="1.025"/>
-  <testcase name="android user see error message on field" classname="As user i have failed to login with empty data" time="0.338"/>
-  <testcase name="As user i have failed to login with empty data" classname="As user i have failed to login with empty data" time="0.386"/>
-  <testcase name="android user on landing screen" classname="As user i have failed to login with empty email" time="21.486"/>
-  <testcase name="android user not input email" classname="As user i have failed to login with empty email" time="0.993"/>
-  <testcase name="android user input password" classname="As user i have failed to login with empty email" time="1.001"/>
-  <testcase name="android user see error message on email field" classname="As user i have failed to login with empty email" time="0.61"/>
-  <testcase name="As user i have failed to login with empty email" classname="As user i have failed to login with empty email" time="0.627"/>
-  <testcase name="android user on landing screen" classname="As user i have failed to login with empty password" time="20.197"/>
-  <testcase name="android user input valid email" classname="As user i have failed to login with empty password" time="0.993"/>
-  <testcase name="android user not input password" classname="As user i have failed to login with empty password" time="1.374"/>
-  <testcase name="android user see error message on password field" classname="As user i have failed to login with empty password" time="0.127"/>
-  <testcase name="As user i have failed to login with empty password" classname="As user i have failed to login with empty password" time="0.152"/>
-  <testcase name="android user on landing screen" classname="As user i have failed to login with not registered email" time="18.182"/>
-  <testcase name="android user input not registered email" classname="As user i have failed to login with not registered email" time="1.051"/>
-  <testcase name="android user input valid password" classname="As user i have failed to login with not registered email" time="1.41"/>
-  <testcase name="android user click login button" classname="As user i have failed to login with not registered email" time="0.639"/>
-  <testcase name="android user see error message not registered email" classname="As user i have failed to login with not registered email" time="15.086">
-    <error message="Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 5f59598c-a7ba-4dae-b2e9-5a4fa760e17a
-*** Element info: {Using=accessibility id, value=Email atau password tidak sesuai}
-</error>
-    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mandroid user click login button&amp#27;[0m                              &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.clickLoginButton()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="As user i have failed to login with not registered email" classname="As user i have failed to login with not registered email" time="15.164">
-    <error message="Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 5f59598c-a7ba-4dae-b2e9-5a4fa760e17a
-*** Element info: {Using=accessibility id, value=Email atau password tidak sesuai}
-</error>
-    <system-out><![CDATA[  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mandroid user see error message not registered email&amp#27;[0m         &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageNotRegisteredEmail()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.getErrorNotRegisteredEmail(LoginPage.java:120)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorNotRegisteredEmail$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorNotRegisteredEmail(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageNotRegisteredEmail(LoginSteps.java:106)
-	at âœ½.android user see error message not registered email(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Login.feature:45)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: 5f59598c-a7ba-4dae-b2e9-5a4fa760e17a
-*** Element info: {Using=accessibility id, value=Email atau password tidak sesuai}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.FindsByAccessibilityId.findElementByAccessibilityId(FindsByAccessibilityId.java:37)
-	at io.appium.java_client.MobileBy$ByAccessibilityId.findElement(MobileBy.java:284)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.getErrorNotRegisteredEmail(LoginPage.java:120)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorNotRegisteredEmail$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorNotRegisteredEmail(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageNotRegisteredEmail(LoginSteps.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
-	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:110)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:286)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user on landing screen" classname="As user i have failed to login with wrong password" time="30.703">
-    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Login to continue!&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Login to continue!"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: b7a73c6e-0faf-4456-939e-120ef2c838af
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Login to continue!"]}
-</error>
-    <system-out><![CDATA[
-@login @fail5
-Scenario: As user i have failed to login with wrong password &amp#27;[90m# src/test/resources/features/Login.feature:48&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[[main] ERROR  - 
-  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
- |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
-   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
-   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
-
-As user i have failed to login with not registered email
----------------------------------------------------------------
-[main] ERROR  -     Test failed at step: Then android user see error message not registered email
-[main] ERROR  -     Expected condition failed: waiting for visibility of element located by By.AccessibilityId: Email atau password tidak sesuai (tried for 15 second(s) with 500 milliseconds interval)
-[main] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Login.feature
-[main] INFO  - 
-  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
- |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
-   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
-   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
-
-As user i have failed to login with wrong password(as-a-user-i-want-to-login-in-the-app-so-that-i-can-see-homepage;as-user-i-have-failed-to-login-with-wrong-password)
---------------------------------------------------------------------------------
-Jul 04, 2022 8:31:25 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="android user input valid email" classname="As user i have failed to login with wrong password" time="0">
-    <skipped/>
-    <system-out><![CDATA[  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31mandroid user on landing screen&amp#27;[0m                       &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.onLandingPage()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Login to continue!"] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.onLoginPage(LoginPage.java:69)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onLoginPage$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onLoginPage(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.onLandingPage(LoginSteps.java:18)
-	at âœ½.android user on landing screen(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Login.feature:49)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: b7a73c6e-0faf-4456-939e-120ef2c838af
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Login to continue!"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.onLoginPage(LoginPage.java:69)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onLoginPage$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.onLoginPage(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.onLandingPage(LoginSteps.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
-	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:110)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:286)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user input wrong password" classname="As user i have failed to login with wrong password" time="0">
-    <skipped/>
-    <system-out><![CDATA[  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mandroid user input valid email&amp#27;[0m                        &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.inputValidEmail()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user click login button" classname="As user i have failed to login with wrong password" time="0">
-    <skipped/>
-    <system-out><![CDATA[  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mandroid user input wrong password&amp#27;[0m                      &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserInputWrongPassword()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user see error message wrong password" classname="As user i have failed to login with wrong password" time="0">
-    <skipped/>
-    <system-out><![CDATA[  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mandroid user click login button&amp#27;[0m                        &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.clickLoginButton()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="As user i have failed to login with wrong password" classname="As user i have failed to login with wrong password" time="0.096">
-    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Login to continue!&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Login to continue!"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: b7a73c6e-0faf-4456-939e-120ef2c838af
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Login to continue!"]}
-</error>
-    <system-out><![CDATA[  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mandroid user see error message wrong password&amp#27;[0m         &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageWrongPassword()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="android user on landing screen(As user i have failed to login with invalid password" classname="android user on landing screen(As user i have failed to login with invalid password(less than minimum char))" time="19.422"/>
-  <testcase name="android user input valid email(As user i have failed to login with invalid password" classname="android user input valid email(As user i have failed to login with invalid password(less than minimum char))" time="1.764"/>
-  <testcase name="android user input invalid password(As user i have failed to login with invalid password" classname="android user input invalid password(As user i have failed to login with invalid password(less than minimum char))" time="1.428"/>
-  <testcase name="android user click login button(As user i have failed to login with invalid password" classname="android user click login button(As user i have failed to login with invalid password(less than minimum char))" time="1.19"/>
-  <testcase name="android user see error message invalid password(As user i have failed to login with invalid password" classname="android user see error message invalid password(As user i have failed to login with invalid password(less than minimum char))" time="15.161">
-    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Email atau password tidak sesuai&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Email atau password tidak sesuai"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: a5175261-b306-4ee2-a555-e0a20c8d73f3
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Email atau password tidak sesuai"]}
-</error>
-    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mandroid user click login button&amp#27;[0m                                                  &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.clickLoginButton()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="As user i have failed to login with invalid password" classname="less than minimum char" time="15.341">
-    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc=&quot;Email atau password tidak sesuai&quot;] (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Email atau password tidak sesuai"] (tried for 15 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: a5175261-b306-4ee2-a555-e0a20c8d73f3
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Email atau password tidak sesuai"]}
-</error>
-    <system-out><![CDATA[  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mandroid user see error message invalid password&amp#27;[0m                                 &amp#27;[90m# test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageInvalidPassword()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc="Email atau password tidak sesuai"] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.getErrorInvalidPassword(LoginPage.java:125)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorInvalidPassword$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorInvalidPassword(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageInvalidPassword(LoginSteps.java:117)
-	at âœ½.android user see error message invalid password(file:///D:/kampus%20merdeka/QE_Capstone%20Kanbo/capstone/mobile/src/test/resources/features/Login.feature:61)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EQ55Q8H', ip: '192.168.43.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: D:\kampus merdeka\QE_Capsto..., appPackage: com.mufidz.kanbo, autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {app: D:\kampus merdeka\QE_Capsto..., autoGrantPermissions: true, automationName: UiAutomator2, newCommandTimeout: 100, noReset: true, platformName: android, waitForIdleTimeout: 100}, deviceApiLevel: 30, deviceManufacturer: Sony, deviceModel: SOV40, deviceName: BH9702CSGN, deviceScreenDensity: 420, deviceScreenSize: 1096x2560, deviceUDID: BH9702CSGN, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 100, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2455, left: 0, top: 63, width: 1096}, waitForIdleTimeout: 100, warnings: {}, webStorageEnabled: false}
-Session ID: a5175261-b306-4ee2-a555-e0a20c8d73f3
-*** Element info: {Using=xpath, value=//android.view.View[@content-desc="Email atau password tidak sesuai"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at test.mobile.pageobject.BasePageObject.waitUntilVisible(BasePageObject.java:43)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:407)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:192)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.waitUntilVisible(Unknown Source)
-	at test.mobile.pages.LoginPage.getErrorInvalidPassword(LoginPage.java:125)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorInvalidPassword$accessor$xNUKoWtQ(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at test.mobile.pages.LoginPage$ByteBuddy$2fRMTTyU.getErrorInvalidPassword(Unknown Source)
-	at test.mobile.stepdefenitions.LoginSteps.androidUserSeeErrorMessageInvalidPassword(LoginSteps.java:117)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
-	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:110)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)
-	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:286)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-&amp#27;[0m
+    <system-out><![CDATA[  &amp#27;[36mThen &amp#27;[0m&amp#27;[36muser just completes the data&amp#27;[0m                  &amp#27;[90m# test.mobile.stepdefenitions.RoomSteps.userJustCompletesTheData()&amp#27;[0m
 ]]></system-out>
   </testcase>
 </testsuite>

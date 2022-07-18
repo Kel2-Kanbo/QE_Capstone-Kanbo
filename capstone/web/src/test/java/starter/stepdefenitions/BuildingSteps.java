@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import starter.pages.BuildingPage;
 
 public class BuildingSteps {
@@ -20,7 +21,8 @@ public class BuildingSteps {
 
     @Then("I can see list building")
     public void iCanSeeListBuilding() {
-        buildingPage.onBuildingPage();
+        boolean actual = buildingPage.onBuildingPage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 2
@@ -54,9 +56,15 @@ public class BuildingSteps {
         buildingPage.clickAddBuilding();
     }
 
+    @And("admin click success add")
+    public void adminClickSuccessAdd() {
+        buildingPage.clickSuccessButton();
+    }
+
     @Then("admin success crete new building")
     public void adminSuccessCreteNewBuilding() {
-        buildingPage.clickSuccessButton();
+        boolean actual = buildingPage.validationOnBuildingPage();
+        Assert.assertTrue(actual);
     }
 
     //scenario 3
@@ -73,32 +81,28 @@ public class BuildingSteps {
     @And("admin fill duration and distance facilities")
     public void adminFillDurationAndDistanceFacilities() {
         buildingPage.fillDistanceFacilities("20");
+        buildingPage.fillDurationFacilities("20");
     }
 
     @And("admin click add facilities")
     public void adminClickAddFacilities() {
-        buildingPage.fillDurationFacilities("20");
-    }
-
-    //scenario 3
-    @When("admin fill same data building")
-    public void adminFillSameDataBuilding() {
-    }
-
-    @Then("admin fail to create new building")
-    public void adminFailToCreateNewBuilding() {
-    }
-
-    //scenario 4
-    @When("admin click cancel")
-    public void adminClickCancel() {
-    }
-
-    @Then("admin fail create building and back to building page")
-    public void adminFailCreateBuildingAndBackToBuildingPage() {
+        buildingPage.clickAddFacilities();
+        buildingPage.clickConfirmFacilities();
     }
 
     //scenario 5
+    @And("admin click close")
+    public void adminClickClose() {
+        buildingPage.clickCancelButton();
+    }
+
+    @Then("admin fail add building and back to building page")
+    public void adminFailAddBuildingAndBackToBuildingPage() {
+        boolean actual = buildingPage.validationOnBuildingPage();
+        Assert.assertTrue(actual);
+    }
+
+    //scenario 6
     @And("admin not fill name building")
     public void adminNotFillNameBuilding() {
         buildingPage.fillNameBuilding("");
@@ -121,38 +125,46 @@ public class BuildingSteps {
 
     @Then("admin fail to crete building and get message")
     public void adminFailToCreteBuildingAndGetMessage() {
-        buildingPage.getErrorEmpty();
+        boolean actual = buildingPage.getErrorEmpty();
+        Assert.assertTrue(actual);
     }
 
-    //scenario 6
+    //scenario 7
     @When("i click delete on existing building")
     public void iClickDeleteOnExistingBuilding() {
+        buildingPage.clickDeleteButton();
     }
 
     @Then("i success delete building")
     public void iSuccessDeleteBuilding() {
-    }
-
-    //scenario 7
-    @When("i fill search box with valid keyword")
-    public void iFillSearchBoxWithValidKeyword() {
-    }
-
-    @Then("i get building with this name")
-    public void iGetBuildingWithThisName() {
+        boolean actual = buildingPage.getErrorMessageDelete();
+        Assert.assertTrue(actual);
     }
 
     //scenario 8
-    @When("i choose filter on building page")
-    public void iChooseFilterOnBuildingPage() {
+    @And("admin click update button building")
+    public void adminClickUpdateButtonBuilding() {
+        buildingPage.clickEdtButton();
     }
 
-    @Then("i see building by filter")
-    public void iSeeBuildingByFilter() {
+    @And("admin edit or update data building")
+    public void adminEditOrUpdateDataBuilding() {
+        buildingPage.fillNameBuilding("sampoerna");
     }
 
-    @And("admin click close")
-    public void adminClickClose() {
+    @And("admin click update building")
+    public void adminClickUpdateBuilding() {
+        buildingPage.clickUpdateButton();
+    }
 
+    @And("admin click success update building")
+    public void adminClickSuccessUpdateBuilding() {
+        buildingPage.confirmUpdateButton();
+    }
+
+    @Then("admin success update building")
+    public void adminSuccessUpdateBuilding() {
+        boolean actual = buildingPage.validationNameUpdate();
+        Assert.assertTrue(actual);
     }
 }

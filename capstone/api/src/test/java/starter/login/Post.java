@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.simple.JSONObject;
@@ -14,12 +15,14 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class Post {
 
-    protected static String url = "http://3.88.14.239:80/";
+    public static String url = "http://3.80.97.57";
+    public static String Token = "";
+    public static String TokenAdmin = "";
 
     //scenario 1
     @Step("user set endpoint for login")
     public String setEndpointsLogin(){
-        return url + "api/auth/signin";
+        return url + "/api/auth/signin";
     }
     @Step("user send POST HTTP request")
     public void sendPostHttpRequest(){
@@ -28,6 +31,9 @@ public class Post {
         requestBody.put( "password","password!2");
 
       SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsLogin());
+
+        Response resp = SerenityRest.lastResponse();
+        Token = resp.getBody().jsonPath().get("token");
     }
     @Step("user receive valid HTTP response code 200")
     public void receiveValidResponseCode(){
@@ -37,6 +43,7 @@ public class Post {
     @Step("user receive valid data for new user")
     public void receiveValidData(){
         restAssuredThat(response -> response.body("username",equalTo("user015")));
+        restAssuredThat(response -> response.body("token",equalTo(Token)));
     }
 
     //scenario 2
@@ -161,10 +168,13 @@ public class Post {
     @Step("admin send POST HTTP request with valid data admin")
     public void SendPOSTHTTPRequestWithValidDataAdmin() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put( "email","admin01@gmail.com");
+        requestBody.put( "email","admin02@gmail.com");
         requestBody.put( "password","password!2");
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(SetEndpointForLoginAdmin());
+
+        Response resp = SerenityRest.lastResponse();
+        TokenAdmin = resp.getBody().jsonPath().get("token");
     }
 
     @Step("admin get status code {int}")
@@ -174,6 +184,7 @@ public class Post {
 
     @Step("admin get valid data admin")
     public void aGetValidDataAdmin() {
-        restAssuredThat(response -> response.body("username",equalTo("admin01")));
+        restAssuredThat(response -> response.body("username",equalTo("admin02")));
+        restAssuredThat(response -> response.body("token",equalTo(TokenAdmin)));
     }
 }

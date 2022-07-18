@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class PostRegist {
     private String username = "";
     private String email = "" ;
-    private String url = "http://3.88.14.239:80/";
+    private String url = "http://3.80.97.57/";
 
     @Step("admin set endpoint for register")
     public String setEndpointsRegister(){

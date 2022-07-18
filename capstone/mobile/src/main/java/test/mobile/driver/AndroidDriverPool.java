@@ -26,7 +26,7 @@ public class AndroidDriverPool  {
 //        caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, configProperties.getAndroid().getAppActivity());
         caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 100);
         caps.setCapability(MobileCapabilityType.NO_RESET, true);
-        caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/Kanbo.apk");
+        caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/KanboFinal.apk");
         caps.setCapability(String.valueOf(Setting.WAIT_FOR_IDLE_TIMEOUT), 100);
 
 

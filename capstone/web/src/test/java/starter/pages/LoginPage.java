@@ -35,16 +35,32 @@ public class LoginPage extends PageObject {
         return By.xpath("//p[text()='Email must be valid']");
     }
 
+    private By errorInvalidEmail(){
+        return By.xpath("//div[@role='dialog']");
+    }
+
     private By errorMessagePasswordLessChar(){
         return By.xpath("//p[text()='Must contain at least 6 or more characters']");
     }
 
     private By errorMessageNotRecord(){
-        return By.xpath("//h2[contains(.,'Account not found')]");
+        return By.xpath("//div[@role='dialog']");
     }
 
     private By dialogSuccess(){
         return By.xpath("//div[@role='dialog']");
+    }
+
+    private By logoutButton(){
+        return By.xpath("//span[text()='logout']");
+    }
+
+    private By confirmLogout(){
+        return By.xpath("//button[normalize-space()='Yes, logout!']");
+    }
+
+    private By successLogout(){
+        return By.xpath("//button[normalize-space()='OK']");
     }
 
     //function
@@ -95,6 +111,11 @@ public class LoginPage extends PageObject {
     }
 
     @Step
+    public boolean getInvalidEmailMessage(){
+        return $(errorInvalidEmail()).isDisplayed();
+    }
+
+    @Step
     public boolean getErrorMessagePasswordLessChar(){
         return $(errorMessagePasswordLessChar()).isDisplayed();
     }
@@ -103,8 +124,25 @@ public class LoginPage extends PageObject {
     public boolean getMessageNoRecord(){
         return $(errorMessageNotRecord()).isDisplayed();
     }
+
     @Step
     public void showPass(){
         $(showPassword()).click();
     }
+
+    @Step
+    public void clickLogout(){
+        $(logoutButton()).click();
+    }
+
+    @Step
+    public void clickConfirmLogout(){
+        $(confirmLogout()).click();
+    }
+
+    @Step
+    public void clickSuccessLogout(){
+        $(successLogout()).click();
+    }
+
 }

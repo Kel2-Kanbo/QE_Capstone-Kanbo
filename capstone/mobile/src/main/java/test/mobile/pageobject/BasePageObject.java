@@ -1,6 +1,5 @@
 package test.mobile.pageobject;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
@@ -8,8 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.mobile.driver.AndroidDriverPool;
 import test.mobile.driver.DriverPool;
-
-import java.beans.Visibility;
 
 public class BasePageObject {
 

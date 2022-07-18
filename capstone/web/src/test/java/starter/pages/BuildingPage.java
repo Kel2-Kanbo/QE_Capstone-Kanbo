@@ -64,6 +64,41 @@ public class BuildingPage extends PageObject {
         return By.xpath("//p[@class='has-text-centered text-error-red']");
     }
 
+    private By cancelButton(){
+        return By.xpath("//button[normalize-space()='Close']");
+    }
+
+    private By confimFacilities(){
+        return By.xpath("//button[normalize-space()='OK']");
+    }
+
+    private By validationBuilding(){
+        return By.xpath("//td[normalize-space()='1']");
+    }
+
+    private By editButton() {
+        return By.xpath("//tbody/tr[2]/td[8]/button[1]/a[1]//*[name()='svg']//*[name()='path' and contains(@d,'M14.4767 1')]");
+    }
+
+    private By updateButton(){
+        return By.xpath("//button[normalize-space()='Update Building']");
+    }
+
+    private By confirmUpdate(){
+        return By.xpath("//button[normalize-space()='OK']");
+    }
+
+    private By validUpdate(){
+        return By.xpath("//td[normalize-space()='sampoerna']");
+    }
+
+    private By deleteButton(){
+        return By.xpath("//tbody/tr[2]/td[8]/button[2]");
+    }
+
+    private By errorDelete(){
+        return By.xpath("(//h2[normalize-space()=\"Error Can't Delete Building\"])[1]");
+    }
 
     //function
     @Step
@@ -142,8 +177,52 @@ public class BuildingPage extends PageObject {
     }
 
     @Step
+    public void clickCancelButton(){
+        $(cancelButton()).click();
+    }
+
+    @Step
     public boolean getErrorEmpty(){
         return $(errorEmptyData()).isDisplayed();
     }
 
+    @Step
+    public boolean validationOnBuildingPage(){
+        return $(validationBuilding()).isDisplayed();
+    }
+
+    @Step
+    public void clickConfirmFacilities(){
+        $(confimFacilities()).click();
+    }
+
+    @Step
+    public void clickEdtButton(){
+        $(editButton()).click();
+    }
+
+    @Step
+    public void clickUpdateButton(){
+        $(updateButton()).click();
+    }
+
+    @Step
+    public void confirmUpdateButton(){
+        $(confirmUpdate()).click();
+    }
+
+    @Step
+    public boolean validationNameUpdate(){
+        return $(validUpdate()).isDisplayed();
+    }
+
+    @Step
+    public void clickDeleteButton(){
+        $(deleteButton()).click();
+    }
+
+    @Step
+    public boolean getErrorMessageDelete(){
+        return $(errorDelete()).isDisplayed();
+    }
 }

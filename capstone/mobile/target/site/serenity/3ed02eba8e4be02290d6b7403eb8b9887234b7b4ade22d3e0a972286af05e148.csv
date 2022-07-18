@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"As user I want to chat admin So that i can se detail chat","As user i click existing chat from admin building","SUCCESS","2022-07-18T03:21:47.188+07:00[Asia/Bangkok]","0.0","20.9"
+"As user I want to chat admin So that i can se detail chat","As user i send message","SUCCESS","2022-07-18T03:22:27.07+07:00[Asia/Bangkok]","0.0","23.69"
